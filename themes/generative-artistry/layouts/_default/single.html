@@ -3,26 +3,34 @@
   <head>
     <title>Generative Artistry</title>
 
-    <!-- META -->
     <meta charset="utf-8">
     
-    <!-- <link rel="mask-icon" href="safari-tab-icon.svg" color="#000000"> -->
     <meta name="description" content="Generative art tutorials, news and love.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- CSS -->
     <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
+    <link href="/css/syntax-highlighting.css" rel="stylesheet">
   </head>
+  <body class="tutorial">
 
     {{ partial "header.html" . }}
 
-    <div class="wrapper tutorials">
-      <div class="technical-sidebar">
-        <div id="code-area" class="code-area"></div>
-        <div class="send-it"><span></span></div>
-        <iframe src="/utils/injectable-frame.html" sandbox="allow-same-origin allow-scripts"></iframe>
+    <div class="tutorial-post">
+      
+      <div class="tutorial-sidebar">
+
+        <div id="tutorial-code" class="tutorial-code"></div>
+        
+        <div class="tutorial-send-code">
+          <span></span>
+        </div>
+
+        <iframe class="tutorial-frame" src="/utils/injectable-frame.html" sandbox="allow-same-origin allow-scripts"></iframe>
+
       </div>
-      <div class="content">
+
+      <div class="tutorial-content">
         {{ .Content }}
       </div>
     </div>

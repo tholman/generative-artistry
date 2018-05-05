@@ -34,6 +34,10 @@ header, footer {
   width: 100%;
 }
 
+.tutorial header {
+  background: #fafafa;
+}
+
 header .wrapper, footer .wrapper {
   justify-content: space-between;
   flex-direction: row;
@@ -117,8 +121,59 @@ article:nth-child(even) {
   font-weight: bold;
 }
 
-
-
 /**
  * Tutorials
  */
+
+.tutorial-post {
+  justify-content: center;
+  display: flex;
+}
+
+.tutorial-sidebar {
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-right: 20px;
+  position: sticky;
+  height: 100vh;
+  display: flex;
+  width: 400px;
+  top: 0px;
+}
+
+.tutorial-content {
+  padding: 20px;
+  padding-bottom: 50vh;
+  width: 560px;
+  color: #222;
+}
+
+.tutorial-content h1 {
+  font-size: 28px;
+}
+
+.tutorial-content p {
+  margin-bottom: 20px;
+  line-height: 22px;
+  font-size: 15px;
+}
+
+.tutorial-code {
+  width: 320px;
+  height: 280px;
+}
+
+.tutorial-send-code {
+  width: 30px;
+  height: 30px;
+  background: red;
+}
+
+.tutorial-frame {
+  border-top: 20px solid;
+  background: #f9f9f9;
+  height: 320px;
+  width: 320px;
+  border: 0px;
+}
