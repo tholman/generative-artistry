@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <script>
+      // Register listener, and eval'er
+      window.addEventListener("message", receiveMessage, false);
+
+      function receiveMessage(event) {
+        // if (event.origin !== "http://example.org:8080")
+        //   return;
+        var scripts = document.getElementById('injected');
+        if( scripts ) {
+          scripts.parentNode.removeChild(scripts);
+        }
+
+        var script = document.createElement('script');
+        script.id = "injected";
+        script.innerHTML = event.data;
+        document.body.appendChild(script);
+      }
+    </script>
+
+    <style>
+      html, body {
+        margin: 0px;
+        padding: 0px;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas></canvas>
+    <div class="inject"></div>
+  </body>
+</html>

@@ -23,6 +23,10 @@ a {
   color: inherit;
 }
 
+code {
+  font-weight: bold;
+}
+
 /**
  * Header & Footer
  */
