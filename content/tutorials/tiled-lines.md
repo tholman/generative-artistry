@@ -6,7 +6,6 @@ image = "/img/01-tiled-lines.png"
 teaser = "This demo is one of the most simplistic, yet beautiful pieces of generative art you can make. Its kinda famous in its own right, appearing on books and on all sorts of devices."
 +++
 
-
 # Tiled Lines
 
 I want to get going with some of the earliest programming art out there, but also one of the simplest. I'm referring to the [10 PRINT](https://www.youtube.com/watch?v=m9joBLOZVEo) artwork initially coded for the commodore 64.

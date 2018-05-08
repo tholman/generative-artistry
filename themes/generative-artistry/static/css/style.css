@@ -53,6 +53,20 @@ header a, footer a {
   text-decoration: none;
 }
 
+.tutorial footer {
+  background: #fafafa;
+}
+
+.links a {
+  border-bottom: 2px solid;
+}
+
+footer .coffee {
+  border-bottom: 0px;
+  line-height: 24px;
+  font-size: 28px;
+}
+
 /**
  * Home
  */
@@ -70,6 +84,15 @@ article {
 article:nth-child(even) {
   background: #fafafa;
   flex-direction: row-reverse;
+}
+
+/*Footer if there is an even number of posts*/
+article:nth-child(odd) + footer {
+    background: #fafafa;
+}
+
+article:last-of-type {
+  margin-bottom: 0px;
 }
 
 .article-number {
@@ -138,11 +161,11 @@ article:nth-child(even) {
   justify-content: center;
   flex-direction: column;
   align-items: flex-end;
-  padding-right: 20px;
+  padding-right: 30px;
   position: sticky;
   height: 100vh;
   display: flex;
-  width: 400px;
+  width: 350px;
   top: 0px;
 }
 
@@ -171,7 +194,9 @@ article:nth-child(even) {
 .tutorial-send-code {
   width: 30px;
   height: 30px;
-  background: red;
+  font-size: 25px;
+  transform: scaleX(-1.0);
+  margin-right: -35px;
 }
 
 .tutorial-frame {
