@@ -12,6 +12,7 @@
 
   function setup() {
     setupCode();
+    console.log("?");
   }
 
   function setupCode() {
@@ -40,6 +41,8 @@
 
       editor.getModel().updateOptions({ tabSize: 2 })
 
+      console.log("?");
+
       setupTutorial();
     });
 
@@ -47,6 +50,7 @@
   }
 
   function setupTutorial() {
+
 
     sendItButton = document.querySelector('.tutorial-send-code');
     sendItButton.addEventListener('click', sendCode);
@@ -58,16 +62,16 @@
 
     window.addEventListener('scroll', onContentScroll);
     triggers = document.querySelectorAll('.tmd-trigger');
-    blocks = document.querySelectorAll('.tmd');
-    for( var i = 0; i < blocks.length; i++ ) {
-      var blockElement = blocks[i];
+    
+    for( var i = 0; i < triggers.length; i++ ) {
+      var blockElement = triggers[i];
       
       var blockStructure = {
-        code: blockElement.innerHTML.replace('&gt;', '>').replace('&lt;', '<').replace('&lt;', '<'),
+        code: blockElement.querySelectorAll('.language-js')[1].innerText.replace('&gt;', '>').replace('&lt;', '<').replace('&lt;', '<'),
         action: blockElement.getAttribute('data-action'),
         from: parseInt(blockElement.getAttribute('data-from')),
         to: blockElement.getAttribute('data-to'),
-        lines: blockElement.innerHTML.split('\n').length
+        lines: blockElement.querySelectorAll('.language-js')[1].innerText.split('\n').length
       }
 
       if( blockStructure.to === 'all' ) {
@@ -78,6 +82,8 @@
 
       structure.push(blockStructure)
     }
+
+    console.log(structure);
 
   }
 
@@ -156,5 +162,7 @@
   function bind() {}
 
   setup();
+
+  console.log("WTF?")
 
 // })();

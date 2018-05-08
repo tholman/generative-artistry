@@ -14,7 +14,7 @@ This work has been featured all over the place, and gives a really stunning effe
 
 <!-- ![The demo]({{site.url}}/assets/images/01-tiled-lines.png) -->
 
-We're going to do this, as usual, with the javascript canvas. No extra API's today.
+We're going to do this with the javascript canvas. No extra API's today. The only HTML we have on the page is a `<canvas>` element at 300x300 pixels.
 
 Lets kick things off with some initial setup. You're not going to see anything render here, because these are the primary lines to setting up the canvas and context which we use to draw.
 
@@ -27,14 +27,15 @@ var size = window.innerWidth;
 
 canvas.width = size;
 canvas.height = size;
+ 
 {{< / highlight >}}
 </div>
 
 This will set us up with a canvas with a square size ~ and provide us with the ever useful "context" of which we use to draw.
 
-Now, lets create a draw function, which we will be using of course, to draw. Its going to accept an x, y, width and height. Lets also call that draw function, even though its empty.
+Now, lets create a draw function, which we will be using to draw. Its going to accept an x, y, width and height. Lets also call that draw function, even though its empty.
 
-<div id="tmd-2" class="tmd-trigger" data-from="9" data-action="inject" data-to="9">
+<div id="tmd-2" class="tmd-trigger" data-from="10" data-action="inject" data-to="10">
 {{< highlight js "linenos=table,linenostart=9" >}}
 function draw(x, y, width, height) {
   // TODO: Functionality here
@@ -44,38 +45,37 @@ draw(0, 0, size, size);
 {{< / highlight >}}
 </div>
 
-
 The way that this is built out at the moment, we will use the `draw` function to draw out something from the x and y coordinates of `(0, 0)`, to the full width and height of the canvas.
 
 So how about we draw something. Lets start with a simple line.
 
 <div id="tmd-3" class="tmd-trigger" data-action="replace" data-from="10" data-to="11">  
 {{< highlight js "linenos=table,linenostart=10" >}}
-context.moveTo(x, y);
-context.lineTo(x + width, y + height);   
-context.stroke();
+  context.moveTo(x, y);
+  context.lineTo(x + width, y + height);   
+  context.stroke();
 {{< / highlight >}}
 </div>
 
 And there we have it, diagonal line, going from our top left, to the bottom right of the canvas space. But at the moment, thats static. 
 
-To make it "generative we'll need to change it so that given a 50% chance of the time, it will go from the top right to the bottom left instead. Taking the "art" our of our hands, and into the computers.
+To make it "generative" we'll need to change it so that given a 50% chance of the time, it will go from the top right to the bottom left instead. Taking the "art" our of our hands, and into the computers.
 
 To use that, we will add a random chance boolean, and an if statement.
 
 <div id="tmd-4" class="tmd-trigger" data-action="replace" data-from="10" data-to="13">  
 {{< highlight js "linenos=table,linenostart=10" >}}
-var leftToRight = Math.random() >= 0.5;
+  var leftToRight = Math.random() >= 0.5;
 
-if( leftToRight ) {
-  context.moveTo(x, y);
-  context.lineTo(x + width, y + height);    
-} else {
-  context.moveTo(x + width, y);
-  context.lineTo(x, y + height);
-}
+  if( leftToRight ) {
+    context.moveTo(x, y);
+    context.lineTo(x + width, y + height);    
+  } else {
+    context.moveTo(x + width, y);
+    context.lineTo(x, y + height);
+  }
 
-context.stroke();
+  context.stroke();
 {{< / highlight >}}
 </div>
 
@@ -105,7 +105,7 @@ for( var x = 0; x < size; x += step) {
 
 Kapow, how about that. So now, we can reduce the step to say:
 
-<div id="tmd-5" class="tmd-trigger" data-action="replace" data-from="5" data-to="5">  
+<div id="tmd-5" class="tmd-trigger" data-action="replace" data-from="5" data-to="6">  
 {{< highlight js "linenos=table,linenostart=5" >}}
 var step = 20;
 {{< / highlight >}}
