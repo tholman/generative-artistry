@@ -198,6 +198,7 @@ article:last-of-type {
   font-size: 25px;
   transform: scaleX(-1.0);
   margin-right: -35px;
+  cursor: pointer;
 }
 
 .tutorial-frame {
