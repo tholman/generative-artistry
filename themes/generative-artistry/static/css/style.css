@@ -209,3 +209,36 @@ article:last-of-type {
   width: 320px;
   border: 0px;
 }
+
+@media only screen and (max-width: 900px) {
+  article {
+    flex-direction: column !important; /* Override nth child */
+  }
+
+  .article-image {
+    width: 90%;
+    height: auto;
+  }
+
+  .article-number {
+    display: none;
+  }
+
+  .article-content {
+    margin-top: -150px;
+    width: 100%;
+  }
+
+  .links {
+    text-align: right;
+  }
+
+  .tutorial-sidebar {
+    display: none;
+  }
+
+  .tutorial-content {
+    width: 100%;
+    padding-bottom: 50px;
+  }
+}
