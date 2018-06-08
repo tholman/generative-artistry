@@ -119,7 +119,7 @@ And then we will add in the fill command, after the line is drawn. This coveres 
 {{< / highlight >}}
 </div>
 
-We're getting so close now. The only piece left is to make the lines much less jagged. To do this, we're going to use quadratic curves, and create control points between each one to create a smooth movement
+We're getting so close now. The only piece left is to make the lines much less jagged. To do this, we're going to use quadratic curves, and create control points between each one to create a smooth path. The final `quadraticCurveTo` is running the last joining step.
 
 <div id="tmd-8" class="tmd-trigger" data-from="32" data-action="replace" data-to="35">
 {{< highlight js "linenos=table,linenostart=0" >}}
