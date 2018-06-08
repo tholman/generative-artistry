@@ -12,7 +12,6 @@
 
   function setup() {
     setupCode();
-    console.log("?");
   }
 
   function setupCode() {
@@ -40,8 +39,6 @@
       })
 
       editor.getModel().updateOptions({ tabSize: 2 })
-
-      console.log("?");
 
       setupTutorial();
     });
@@ -82,9 +79,6 @@
 
       structure.push(blockStructure)
     }
-
-    console.log(structure);
-
   }
 
   function onContentScroll(e) {
@@ -141,7 +135,7 @@
   }
 
   function onCodeReverse(step) {
-    console.log("remove!");
+    // console.log("remove!");
   }
 
   function sendCode() {
@@ -162,7 +156,5 @@
   function bind() {}
 
   setup();
-
-  console.log("WTF?")
 
 // })();
