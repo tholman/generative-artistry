@@ -163,6 +163,7 @@ article:last-of-type {
   flex-direction: column;
   align-items: flex-end;
   padding-right: 30px;
+  position: -webkit-sticky;
   position: sticky;
   height: 100vh;
   display: flex;
