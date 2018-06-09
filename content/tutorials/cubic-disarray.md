@@ -75,12 +75,12 @@ We can use those variables then, to create the random translations and rotations
 
 <div id="tmd-3" class="tmd-trigger" data-action="inject" data-from="22" data-to="22">  
 {{< highlight js "linenos=table,linenostart=22" >}}
-var plusOrMinus = Math.random() < 0.5 ? -1 : 1;
-var rotateAmt = j / size * Math.PI / 180 * plusOrMinus * Math.random() * rotateMultiplier;
+    var plusOrMinus = Math.random() < 0.5 ? -1 : 1;
+    var rotateAmt = j / size * Math.PI / 180 * plusOrMinus * Math.random() * rotateMultiplier;
 
-plusOrMinus = Math.random() < 0.5 ? -1 : 1;
-var translateAmt = j / size * plusOrMinus * Math.random() * randomDisplacement;
-  
+    plusOrMinus = Math.random() < 0.5 ? -1 : 1;
+    var translateAmt = j / size * plusOrMinus * Math.random() * randomDisplacement;
+      
 {{< / highlight >}}
 </div>
 
@@ -88,8 +88,8 @@ Now, we apply them, within the translate and rotate (suddenly all that setup pai
 
 <div id="tmd-3" class="tmd-trigger" data-action="replace" data-from="29" data-to="30">  
 {{< highlight js "linenos=table,linenostart=22" >}}
-context.translate( i + translateAmt, j)
-context.rotate(rotateAmt);
+    context.translate( i + translateAmt, j)
+    context.rotate(rotateAmt);
 {{< / highlight >}}
 </div>
 

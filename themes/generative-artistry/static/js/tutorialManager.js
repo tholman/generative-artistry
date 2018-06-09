@@ -1,5 +1,168 @@
-//
-// This is a super jank version of this file, WIP af.
-// A cleaner, documented version is coming soon, stay posted!
-//
-var editor,triggers,blocks,structure,sendItButton,fullCodeSets,frame=document.querySelector("iframe"),contentElement=document.querySelector(".content"),currentStep=-1,hasTyped=!1;function setup(){setupCode()}function setupCode(){require.config({paths:{vs:"/js/libs/monaco-editor/vs"}}),require(["vs/editor/editor.main"],function(){(editor=monaco.editor.create(document.getElementById("tutorial-code"),{value:["// Welcome to Tutorial Markdown.","// start scrolling, and we'll","// write the code."].join("\n"),lineNumbersMinChars:3,scrollBeyondLastLine:!1,language:"javascript",fontSize:10,minimap:{enabled:!1},hover:!1,occurrencesHighlight:!1})).onKeyDown(function(e){hasTyped=!0}),editor.getModel().updateOptions({tabSize:2}),setupTutorial()}),bind()}function setupTutorial(){(sendItButton=document.querySelector(".tutorial-send-code")).addEventListener("click",sendCode),structure=[],fullCodeSets={},saveCode(currentStep),window.addEventListener("scroll",onContentScroll),triggers=document.querySelectorAll(".tmd-trigger");for(var e=0;e<triggers.length;e++){var t=triggers[e],o={code:t.querySelectorAll(".language-js")[1].innerText.replace("&gt;",">").replace("&lt;","<").replace("&lt;","<"),action:t.getAttribute("data-action"),from:parseInt(t.getAttribute("data-from")),to:t.getAttribute("data-to"),lines:t.querySelectorAll(".language-js")[1].innerText.split("\n").length};"all"===o.to?o.to=parseInt(o.from)+o.code.split("\n").length:o.to=parseInt(o.to),structure.push(o)}}function onContentScroll(e){for(var t=-1,o=0;o<triggers.length;o++){var r=triggers[o].getBoundingClientRect();r.y+r.height/3<(window.innerHeight-65)/2+65&&(o===currentStep+1&&onCodeAdd(currentStep=o),t=o)}t===currentStep-1&&(onCodeRemove((currentStep-=1)+1),sendCode(currentStep))}function onCodeRemove(e){var t={identifier:{major:1,minor:1},range:new monaco.Range(0,1,999,1),text:fullCodeSets[e-1],forceMoveMarkers:!0};editor.executeEdits(fullCodeSets[e-1],[t]),hasTyped=!1}function onCodeAdd(e){!0===hasTyped&&onCodeRemove(e);var t=structure[e],o={identifier:{major:1,minor:1},range:new monaco.Range(t.from,1,t.to,1),text:t.code,forceMoveMarkers:!0};editor.executeEdits(t.code,[o]),editor.revealLines(t.from,t.from+t.lines),sendCode(),saveCode(e)}function onCodeReverse(e){}function sendCode(){var e=editor.getValue();frame.contentWindow.postMessage(e,"*")}function saveCode(e){fullCodeSets[e]||(fullCodeSets[e]=editor.getValue())}function bind(){}setup();
+/**
+ **  BAD CODE ALERT!
+ **  - This is the original conceptual version of tutorial markdown
+ **  Im currently doing a full rewrite, now I understand the ideas,
+ **  needs, goals and aims of the project.
+ **  * There is some nasty stuff in here! *
+ **/  
+
+// (function() {
+
+  // Editor variables
+  var frame = document.querySelector('iframe');
+  var editor;
+
+  // Code variables
+  var contentElement = document.querySelector('.content');
+  var triggers, blocks, structure, sendItButton, fullCodeSets;
+  var currentStep = -1;
+  var hasTyped = false;
+
+  function setup() {
+    setupCode();
+  }
+
+  function setupCode() {
+    require.config({ paths: { 'vs': '/js/libs/monaco-editor/vs' }});
+    require(['vs/editor/editor.main'], function() {
+      editor = monaco.editor.create(document.getElementById('tutorial-code'), {
+        value: [
+          '// Welcome to Tutorial Markdown.',
+          '// start scrolling, and we\'ll',
+          '// write the code.'
+        ].join('\n'),
+        lineNumbersMinChars: 3,
+        scrollBeyondLastLine: false,
+        language: 'javascript',
+        fontSize: 10,
+        minimap: {
+          enabled: false
+        },
+        hover: false,
+        occurrencesHighlight: false
+      });
+
+      editor.onKeyDown(function(e) {
+        hasTyped = true;
+      })
+
+      editor.getModel().updateOptions({ tabSize: 2 })
+
+      setupTutorial();
+    });
+
+    bind();
+  }
+
+  function setupTutorial() {
+
+
+    sendItButton = document.querySelector('.tutorial-send-code');
+    sendItButton.addEventListener('click', sendCode);
+
+    structure = [];
+    fullCodeSets = {};
+
+    saveCode(currentStep)
+
+    window.addEventListener('scroll', onContentScroll);
+    triggers = document.querySelectorAll('.tmd-trigger');
+    
+    for( var i = 0; i < triggers.length; i++ ) {
+      var blockElement = triggers[i];
+      
+      var blockStructure = {
+        code: blockElement.querySelectorAll('.language-js')[1].innerText.replace('&gt;', '>').replace('&lt;', '<').replace('&lt;', '<'),
+        action: blockElement.getAttribute('data-action'),
+        from: parseInt(blockElement.getAttribute('data-from')),
+        to: blockElement.getAttribute('data-to'),
+        lines: blockElement.querySelectorAll('.language-js')[1].innerText.split('\n').length
+      }
+
+      if( blockStructure.to === 'all' ) {
+        blockStructure.to = parseInt(blockStructure.from) + blockStructure.code.split('\n').length
+      } else {
+        blockStructure.to = parseInt(blockStructure.to);
+      }
+
+      structure.push(blockStructure)
+    }
+  }
+
+  function onContentScroll(e) {
+
+    var hitSteps = -1;
+
+    for( var i = 0; i < triggers.length; i++) {
+      var dimensions = triggers[i].getBoundingClientRect();
+      var headerHeight = 65; // todo, not put here.
+
+      if( dimensions.y + dimensions.height/3 < ((window.innerHeight - headerHeight) / 2 + headerHeight)) {
+        
+        if( i === currentStep + 1 ) {
+          currentStep = i;
+          onCodeAdd(i);
+        }
+
+        hitSteps = i;
+      }
+    }
+
+    if( hitSteps === currentStep - 1) {
+      currentStep = currentStep - 1;
+      onCodeRemove(currentStep + 1);
+      sendCode(currentStep);
+    }
+  }
+
+  function onCodeRemove(step) {
+    var range = new monaco.Range(0, 1, 999, 1);
+    var id = { major: 1, minor: 1 };           
+    var op = {identifier: id, range: range, text: fullCodeSets[step - 1], forceMoveMarkers: true};
+    editor.executeEdits(fullCodeSets[step - 1], [op]);
+    hasTyped = false;
+  }
+
+  function onCodeAdd(step) {
+
+    if( hasTyped === true ) {
+      onCodeRemove(step);
+    }
+
+    // Positioning the instructions
+    var instructions = structure[step];
+
+    var range = new monaco.Range(instructions.from, 1, instructions.to, 1);
+    var id = { major: 1, minor: 1 };           
+    var op = {identifier: id, range: range, text: instructions.code, forceMoveMarkers: true};
+    editor.executeEdits(instructions.code, [op]);
+    // editor.getAction('editor.action.formatDocument').run()
+    editor.revealLines(instructions.from, instructions.from + instructions.lines);
+    sendCode();
+    saveCode(step);
+  }
+
+  function onCodeReverse(step) {
+    // console.log("remove!");
+  }
+
+  function sendCode() {
+    var value = editor.getValue()
+    
+    frame.contentWindow.postMessage(value, "*")
+  }
+
+  function saveCode(step) {
+
+    // Only save these ones per each step.
+    if( !fullCodeSets[step] ) {
+      fullCodeSets[step] = editor.getValue();
+    }
+
+  }
+
+  function bind() {}
+
+  setup();
+
+// })();

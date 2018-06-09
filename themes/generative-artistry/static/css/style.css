@@ -210,6 +210,10 @@ article:last-of-type {
   border: 0px;
 }
 
+.chroma {
+  overflow: scroll;
+}
+
 @media only screen and (max-width: 900px) {
   article {
     flex-direction: column !important; /* Override nth child */
