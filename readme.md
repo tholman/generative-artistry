@@ -1,6 +1,6 @@
 ## Generative Artistry
 
-Generative artistry is a work in progress blog & tutorial website exploring generative art with self-coding examples. 
+Generative artistry is a **work in progress** blog & tutorial website exploring generative art with self-coding examples. 
 
 ### Tutorial Markdown
 
