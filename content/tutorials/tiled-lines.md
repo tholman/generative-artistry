@@ -8,6 +8,7 @@ teaser = "This demo is one of the most simplistic, yet beautiful pieces of gener
 
 # Tiled Lines
 
+
 I want to get going with some of the earliest programming art out there, but also one of the simplest. I'm referring to the [10 PRINT](https://www.youtube.com/watch?v=m9joBLOZVEo) artwork initially coded for the commodore 64.
 
 This work has been featured all over the place, and gives a really stunning effect for something so simple. To give you an example of what it looks like, its this.

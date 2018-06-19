@@ -6,8 +6,8 @@ image = "/img/02-joy-division.png"
 teaser = "We've all seen this album cover in one form or another. Come and see how we can make a simple version of it."
 +++
 
-
 # Joy Division
+
 
 The joy division album cover has a [cool](https://blogs.scientificamerican.com/sa-visual/pop-culture-pulsar-origin-story-of-joy-division-s-unknown-pleasures-album-cover-video/) history, and is a beautiful example of data driven art, in this tutorial we're going to recreate it in a more simplistic form.
 
