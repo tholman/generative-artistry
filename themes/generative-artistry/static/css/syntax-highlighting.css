@@ -1,8 +1,17 @@
-.highlight table td {
+.tmd-trigger {
+  overflow: auto;
+  width: 100%;
+  background-color: #333;
+  border: 10px solid #333;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.highlighttable td {
   padding: 5px;
   padding-right: 10px;
 }
-.highlight table pre {
+.highlighttable pre {
   margin: 0;
 }
 .highlight .c,
@@ -213,18 +222,17 @@
 .highlight .nt {
   color: #f92672;
 }
-.highlight {
+
+.highlighttable {
   color: #f8f8f2;
   background-color: #333;
-  padding: 10px 10px;
   margin-left: 0px;
   margin-right: 0px;
   line-height: 18px;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  width: 100%;
 }
 
-.lnt {
+.linenos {
   opacity: 0.4;
 }
 

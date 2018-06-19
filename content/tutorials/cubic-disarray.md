@@ -26,7 +26,7 @@ canvas.width = size;
 canvas.height = size;
 
 var squareSize = 40;
- 
+  
 {{< / highlight >}}
 </div>
 
