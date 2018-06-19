@@ -211,7 +211,7 @@ article:last-of-type {
 }
 
 .chroma {
-  overflow: scroll;
+  overflow: auto;
 }
 
 @media only screen and (max-width: 900px) {
