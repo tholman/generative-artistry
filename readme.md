@@ -9,5 +9,5 @@ The version of tutorial markdown in this demo is super conceptual, and is curren
 ### Setup
 Generative artistry runs on hugo, to set it up locally you will need to:
 1. `git clone git@github.com:tholman/generative-artistry.git`
-1. `npm install`
+1. `brew install hugo` [or install via other means](https://gohugo.io/getting-started/installing/))
 1. `hugo server`
