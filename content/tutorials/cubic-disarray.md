@@ -9,11 +9,11 @@ teaser = "Georg Nees was one of the pioneers of computer art. Cubic disarray is 
 # Cubic Disarray
 
 
-[Georg Nees](https://en.wikipedia.org/wiki/Georg_Nees) fantastic generative art is a true inspiration. In this tutorial, we're going to build one of his pieces, called Cubid Disarray.
+[Georg Nees](https://en.wikipedia.org/wiki/Georg_Nees)' fantastic generative art is a true inspiration. In this tutorial, we're going to build one of his pieces: Cubic Disarray.
 
 The only HTML we have on the page is a `<canvas>` element at 300x300 pixels.
 
-As usual, here is our initial setip. You're not going to see anything render here, because these are the primary lines to setting up the canvas and context which we use to draw.
+As usual, here is our initial setup. You're not going to see anything render here, because these are the primary lines to setting up the canvas and context which we use to draw.
 
 <div id="tmd-1" class="tmd-trigger" data-from="0" data-action="replace" data-to="all">
 {{< highlight js "linenos=table,linenostart=1" >}}
@@ -33,7 +33,7 @@ var squareSize = 40;
 
 We've also got a variable in there to define the square size, understandably named `squareSize`.
 
-Now, lets create a function to draw the squares. This function is going to be faily simple, taking only a width and a height. The position of the squares is going to be handled by another loop.
+Now, let's create a function to draw the squares. This function is going to be fairly simple, taking only a width and a height. The position of the squares is going to be handled by another loop.
 
 <div id="tmd-2" class="tmd-trigger" data-from="12" data-action="inject" data-to="12">
 {{< highlight js "linenos=table,linenostart=11" >}}
@@ -45,7 +45,7 @@ function draw(width, height) {
 {{< / highlight >}}
 </div>
 
-So how about we draw something. I'm going to loop through and draw the screen full of squares. Here we're using the context `save`, `translate` & `restore` functions to move the context around, and then our draw function above for drawing.
+So how about we draw something. I'm going to loop through and fill the screen  with squares. Here we're using the context `save`, `translate` & `restore` functions to move the context around, and then our draw function above for drawing.
 
 <div id="tmd-3" class="tmd-trigger" data-action="inject" data-from="18" data-to="all">  
 {{< highlight js "linenos=table,linenostart=10" >}}
@@ -63,7 +63,7 @@ for( var i = squareSize; i <= size - squareSize; i += squareSize) {
 
 And there we have it, squares! Now we have the "cubic" part down, we can get to the disarray. 
 
-Introducing random is fairly simple, first we'll give ourselves some variables, one for how much the squares translate out of their position. And one for how much they rotate.
+Introducing random is fairly simple: first we'll give ourselves some variables, one for how much the squares translate out of their position, and one for how much they rotate.
 
 <div id="tmd-3" class="tmd-trigger" data-action="inject" data-from="11" data-to="11">  
 {{< highlight js "linenos=table,linenostart=10" >}}
@@ -72,7 +72,7 @@ var rotateMultiplier = 20;
 {{< / highlight >}}
 </div>
 
-We can use those variables then, to create the random translations and rotations. They're set up here to be larger numbers as they reach towards the end of the canvas
+We can use those variables, then, to create the random translations and rotations. They're set up here to be larger numbers as they reach towards the end of the canvas.
 
 <div id="tmd-3" class="tmd-trigger" data-action="inject" data-from="22" data-to="22">  
 {{< highlight js "linenos=table,linenostart=22" >}}
@@ -85,7 +85,7 @@ We can use those variables then, to create the random translations and rotations
 {{< / highlight >}}
 </div>
 
-Now, we apply them, within the translate and rotate (suddenly all that setup paid off!)
+Now, we apply the translations and rotatations. (Suddenly all that setup paid off!)
 
 <div id="tmd-3" class="tmd-trigger" data-action="replace" data-from="29" data-to="30">  
 {{< highlight js "linenos=table,linenostart=22" >}}
@@ -94,4 +94,4 @@ Now, we apply them, within the translate and rotate (suddenly all that setup pai
 {{< / highlight >}}
 </div>
 
-And there we have it, cubic disarray!
+And there we have it: cubic disarray!
