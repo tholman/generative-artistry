@@ -10,9 +10,9 @@ teaser = "Triangle meshs are the fundations of 3d modeling, building one doesn't
 # Triangle mesh
 
 
+This effect has been declined to a lot of libraries and scripts based on D3.
 
-
-Let's start by creating a blank canvas
+The following tutorial will take place on a square canvas.
 
 <div id="tmd-1" class="tmd-trigger" data-from="0" data-action="replace" data-to="all">
 {{< highlight js "linenos=table,linenostart=1" >}}
@@ -24,22 +24,26 @@ var size = window.innerWidth;
 canvas.width = size;
 canvas.height = size;
 
-var gap = 80;
 {{< / highlight >}}
 </div>
 
 
-Now let's make a grid of dots. We gonna generate every dots in separate array, each one will represent a line.
+Now let's make a grid of dots. The standard way, regular lines and columns. For every dot coordinate we will draw it on the canvas but also store the coordinate in a 2 dimensions array for future use.
 
-<div id="tmd-2" class="tmd-trigger" data-from="12" data-action="inject" data-to="12">
-{{< highlight js "linenos=table,linenostart=1" >}}
+Every coordinate in this tutorial will be represented by an object with 2 properties: `x` and `y`.
+
+The space between lines and columns is defined by the variable `gap`.
+
+<div id="tmd-2" class="tmd-trigger" data-from="10" data-action="inject" data-to="10">
+{{< highlight js "linenos=table,linenostart=9" >}}
 var line,
-    lines = []
+    lines = [],
+    gap = 50;
 
 for (var y = 0; y < size; y+= gap) {
   line = []
   for (var x = 0; x < size; x+= gap) {
-    line.push({x, y})
+    line.push({x: x, y: y})
     context.beginPath();
     context.arc(x, y, 1, 0, 2 * Math.PI, true);
     context.fill();
@@ -49,20 +53,22 @@ for (var y = 0; y < size; y+= gap) {
 {{< / highlight >}}
 </div>
 
-Then use the data we generated to display dots
+Now, we gonna move one out of two line on the x axis to an offset of half a gap. We can observe the new pattern is shaping a mesh of regular triangles.
 
-<div id="tmd-2" class="tmd-trigger" data-from="12" data-action="replace" data-to="25">
-{{< highlight js "linenos=table,linenostart=1" >}}
-var line, odd,
+<div id="tmd-2" class="tmd-trigger" data-from="8" data-action="replace" data-to="23">
+{{< highlight js "linenos=table,linenostart=9" >}}
+var line, dot,
+    odd = false, 
     lines = []
 
 for (var y = 0; y < size; y+= gap) {
   odd = !odd
   line = []
-  for (var x = odd ? gap/2 : 0; x < size; x+= gap) {
-    line.push({x, y})
+  for (var x = 0; x < size; x+= gap) {
+    dot = {x: x + (odd ? gap/2 : 0), y: y}
+    line.push(dot)
     context.beginPath();
-    context.arc(x, y, 1, 0, 2 * Math.PI, true);
+    context.arc(dot.x, dot.y, 1, 0, 2 * Math.PI, true);
     context.fill();
   }
   lines.push(line)
@@ -70,16 +76,13 @@ for (var y = 0; y < size; y+= gap) {
 {{< / highlight >}}
 </div>
 
-Now we have the data about the dots, we have to go through all of them to generate the connection between them.
 
+The next step will be using the dots to draw the triangles. 
 
+To make our life easier let's make a function that take the 3 coordinates of a triangle and draw it for us.
 
-
-
-Let's build a function to draw triangles from 3 data points.
-
-<div id="tmd-2" class="tmd-trigger" data-from="12" data-action="inject" data-to="12">
-{{< highlight js "linenos=table,linenostart=1" >}}
+<div id="tmd-3" class="tmd-trigger" data-from="24" data-action="inject" data-to="24">
+{{< highlight js "linenos=table,linenostart=24" >}}
 function drawTriangle(pointA, pointB, pointC) {
   context.beginPath();
   context.moveTo(pointA.x, pointA.y);
@@ -95,35 +98,51 @@ function drawTriangle(pointA, pointB, pointC) {
 
 Then use the dots we generated earlier to draw all the triangles.
 
-This part might be a bit complex to understand. The script gonna through all the line and combine the dots of 2 lines. The concatenation make it look like a zig-zap: a1, b1, a2, b2, a3... 
+This part might be a bit complex to understand. The script gonna through all the lines and combine the dots of 2 sibling lines. The concatenation of two lines, let's say line `a` and line `b`, marge the dots into one array to make it look like a zig-zap: `a1`, `b1`, `a2`, `b2`, `a3`... 
 
-<div id="tmd-2" class="tmd-trigger" data-from="12" data-action="inject" data-to="12">
-{{< highlight js "linenos=table,linenostart=1" >}}
-var dotLine
-odd = true
+From this concatenation, we gonna keep moving a window of 3 coordinates till the end of it. It should look like [`a1`, `b1`, `a2`], [`b1`, `a2`, `b2`], [`a2`, `b2`, `a3`]...  Each bloc represent a triangle to draw.
+
+However, there's an important detail. While concatenating, the first dot must be the one the most on the left of the canvas. In our case, the first dot will always be the one from even lines.
+
+<div id="tmd-4" class="tmd-trigger" data-from="33" data-action="inject" data-to="33">
+{{< highlight js "linenos=table,linenostart=33" >}}
+var dotLine;
+odd = true;
+
 for (var y = 0; y < lines.length - 1; y++) {
   odd = !odd
   dotLine = []
   for (var i = 0; i < lines[y].length; i++) {
-    dotLine.push(odd ? lines[y][i] : lines[y+1][i])
+    dotLine.push(odd ? lines[y][i]   : lines[y+1][i])
     dotLine.push(odd ? lines[y+1][i] : lines[y][i])
   }
   for (var i = 0; i < dotLine.length - 2; i++) {
-    drawTriangle(...dotLine.slice(i, i+3))
+    drawTriangle(dotLine[i], dotLine[i+1], dotLine[i+2])
   }
 }
 {{< / highlight >}}
 </div>
 
+We have a now a regular triangle mesh, we are one detail away to let the magic happen.
 
+Every dot is a `gap` away from dots around. So a dot can be moved in this area without overlapping with other dots. Let's use a bit of `Math.random()` to add get a random position in this area. To make it look better, the following code is restricting the area to 80% of it. 
 
-And now: LET'S MAKE THE MAGIC HAPPEN
-
-<div id="tmd-2" class="tmd-trigger" data-from="12" data-action="inject" data-to="12">
-{{< highlight js "linenos=table,linenostart=1" >}}
+<div id="tmd-5" class="tmd-trigger" data-from="16" data-action="replace" data-to="20">
+{{< highlight js "linenos=table,linenostart=16" >}}
 line.push({
-  x: x + (Math.random()*.5 - .25) * gap,
-  y: y + (Math.random()*.5 - .25) * gap,
+  x: x + (Math.random()*.8 - .4) * gap  + (odd ? gap/2 : 0),
+  y: y + (Math.random()*.8 - .4) * gap,
 })
+{{< / highlight >}}
+</div>
+
+
+Extra bonus: let's add a bit of gray. Only 16 shades. No more.
+
+<div id="tmd-6" class="tmd-trigger" data-from="31" data-action="inject" data-to="31">
+{{< highlight js "linenos=table,linenostart=30" >}}
+var gray = Math.floor(Math.random()*16).toString(16);
+context.fillStyle = '#' + gray + gray + gray; 
+context.fill();
 {{< / highlight >}}
 </div>
