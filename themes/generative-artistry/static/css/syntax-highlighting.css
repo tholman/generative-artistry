@@ -28,8 +28,9 @@
   font-style: italic;
 }
 .highlight .err {
-  color: #960050;
-  background-color: #1e0010;
+  /* Temporarily blocked out, because of chroma bugs */
+  /*color: #960050;*/
+  /*background-color: #1e0010;*/
 }
 .highlight .gi {
   color: #ffffff;

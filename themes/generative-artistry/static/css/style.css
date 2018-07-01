@@ -183,6 +183,15 @@ article:nth-child(odd) + footer {
   font-size: 15px;
 }
 
+.tutorial-content p code {
+  background-color: #eee;
+}
+
+.tutorial-contributor {
+  background: #eee;
+  padding: 30px;
+}
+
 .tutorial-code {
   width: 320px;
   height: 280px;
