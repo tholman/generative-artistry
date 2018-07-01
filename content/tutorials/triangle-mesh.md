@@ -9,7 +9,7 @@ teaser = "Triangle meshs are the fundations of 3d modeling, building one doesn't
 # Triangle mesh
 
 <p class="tutorial-contributor">
-This post is from the talented <a href="https://maxwellito.com/">Max Wellito</a>, if you're interested in posting, you can open up a <a href="https://github.com/tholman/generative-artistry/issues/6">proposal</a>, just like he did!
+This post is from the talented <a href="https://maxwellito.com/">maxwellito</a>, if you're interested in posting, you can open up a <a href="https://github.com/tholman/generative-artistry/issues/6">proposal</a>, just like he did!
 </p>
 
 This effect triangular meshing effect is often shown off in libraries and shown off with SVG, today we're going to build it with the canvas! Its a great example of how a coordinate system, and a little displacement can give clean beautiful effects.
