@@ -1,12 +1,12 @@
 +++
-title = "Triangle Mesh"
+title = "Triangular Mesh"
 date = 2018-06-28T10:24:00-04:00
 number = "04"
-image = "/img/04-triangle-mesh.png"
-teaser = "Triangle meshs are the fundations of 3d modeling, building one doesn't require trigonometry crazyness."
+image = "/img/04-triangular-mesh.png"
+teaser = "Triangular meshes are the fundations of 3d modeling, but building one doesn't require trigonometry crazyness."
 +++
 
-# Triangle mesh
+# Triangular mesh
 
 <p class="tutorial-contributor">
 This post is from the talented <a href="https://maxwellito.com/">maxwellito</a>, if you're interested in posting, you can open up a <a href="https://github.com/tholman/generative-artistry/issues/6">proposal</a>, just like he did!
