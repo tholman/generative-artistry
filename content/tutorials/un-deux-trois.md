@@ -3,7 +3,7 @@ title = "Un Deux Trois"
 date = 2018-07-06T09:59:00-04:00
 number = "05"
 image = "/img/05-un-deux-trois.png"
-teaser = "There's no real generative art showcase complete without something from Vera Molnár, "
+teaser = "There's no real generative art showcase complete without something from Vera Molnár, one of earliest pioneers of digital art. "
 +++
 
 # Un Deux Trois
