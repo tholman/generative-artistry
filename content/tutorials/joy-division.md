@@ -8,7 +8,6 @@ teaser = "We've all seen this album cover in one form or another. Come and see h
 
 # Joy Division
 
-
 The Joy Division album cover has a [cool](https://blogs.scientificamerican.com/sa-visual/pop-culture-pulsar-origin-story-of-joy-division-s-unknown-pleasures-album-cover-video/) history, and is a beautiful example of data driven art. In this tutorial we're going to recreate it in a more simplistic form.
 
 We're going to do this with the javascript canvas. No extra API's. The only HTML we have on the page is a `<canvas>` element at 300x300 pixels.

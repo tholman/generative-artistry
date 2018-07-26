@@ -183,6 +183,11 @@ article:nth-child(odd) + footer {
   font-size: 15px;
 }
 
+.tutorial-content li {
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
 .tutorial-content p code {
   background-color: #eee;
 }
@@ -216,6 +221,26 @@ article:nth-child(odd) + footer {
 
 .chroma {
   overflow: auto;
+}
+
+form {
+  background: #f9f9f9;
+  padding: 10px 20px;
+  font-size: 15px;
+  margin-top: 20px;
+  display: inline-block;
+  border-left: 2px solid;
+}
+
+form input {
+  background: none;
+  border: none;
+  color: blue;
+  font-size: 15px;
+  font-family: inherit; 
+  padding: 0;
+  cursor: pointer;
+  text-decoration: underline;
 }
 
 @media only screen and (max-width: 900px) {

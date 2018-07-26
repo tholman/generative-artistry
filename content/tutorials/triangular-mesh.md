@@ -149,4 +149,3 @@ And for a little extra generative fun, lets add in some grays! Only 16 shades. N
 </div>
 
 If you're interested in exploring more detailed implementations of this effect, you can check out my library: [triangulr](http://maxwellito.github.io/triangulr/)
-

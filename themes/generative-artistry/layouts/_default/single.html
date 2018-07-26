@@ -32,6 +32,7 @@
 
       <div class="tutorial-content">
         {{ .Content }}
+        {{ partial "codepen-prefil.html" . }}
       </div>
     </div>
     
@@ -39,6 +40,7 @@
 
     <script src="/js/libs/monaco-editor/vs/loader.js"></script>
     <script src="/js/tutorialManager.js"></script>
+    <script src="/js/codepen-prefil.js"></script>
     <script src="/js/favicon.js"></script>
 
     {{ partial "tracking.html" . }}
