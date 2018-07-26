@@ -102,7 +102,7 @@ Now, we'll add it to our list of circles, and draw it... we didn't really need t
 {{< / highlight >}}
 </div>
 
-Awesome, and there we have it, tiny circles all over our screen. Next, we can look at growing them. We will do this 1 unit at a time, and break out of the loop when we have a collision. When they collide, we'll take one step back, and break out of the loop.
+Awesome, and there we have it, tiny circles all over our screen. Next, we can look at growing them. We will do this 1 unit at a time, and when they collide, we'll take one step back, and break out of the loop.
 
 <div class="tmd-trigger" data-from="24" data-action="replace" data-to="26">
 {{< highlight js "linenos=table,linenostart=24" >}}
@@ -138,7 +138,7 @@ To get the distance between the two center points, we use `pythagoras theorem` (
 {{< / highlight >}}
 </div>
 
-Woah, almost there! But another small gotcha, when we're creating our circles, there's also a chance that they're appearing *inside* others.
+Almost there! But another small gotcha, when we're creating our circles, there's also a chance that they're appearing *inside* others.
 
 We're going to use a loop in the creation area now as well, its a little inefficient to randomly guess positions, but really at the end of the day, unless we were doing millions of circles, we won't see any slow down.
 
