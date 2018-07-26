@@ -116,7 +116,7 @@ Awesome, and there we have it, tiny circles all over our screen. Next, we can lo
 {{< / highlight >}}
 </div>
 
-Wow, what a mess we'e made! Of course we know the reason for this. Currently our `doesCircleHaveACollision` function always returns `false` ... we'll need to fill that in.
+Wow, what a mess we've made! Of course we know the reason for this. Currently our `doesCircleHaveACollision` function always returns `false` ... we'll need to fill that in.
 
 The way that we tell if circles have a collision, is a little bit of trigonometry. We're going to loop through each of the circles that are drawn and compare them to the current circle being drawn. If their radii combined, is greater than the distance between each of their centers, then we know there's a collision.
 
