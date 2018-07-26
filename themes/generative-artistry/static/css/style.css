@@ -248,6 +248,10 @@ form input {
     flex-direction: column !important; /* Override nth child */
   }
 
+  form {
+    display: none;
+  }
+
   .article-image {
     width: 90%;
     height: auto;
