@@ -97,7 +97,7 @@
       var dimensions = triggers[i].getBoundingClientRect();
       var headerHeight = 65; // todo, not put here.
 
-      if( dimensions.y + dimensions.height/3 < ((window.innerHeight - headerHeight) / 2 + headerHeight)) {
+      if( dimensions.top + dimensions.height/3 < ((window.innerHeight - headerHeight) / 2 + headerHeight)) {
         
         if( i === currentStep + 1 ) {
           currentStep = i;
