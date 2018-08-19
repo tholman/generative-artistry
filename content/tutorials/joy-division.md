@@ -14,7 +14,7 @@ We're going to do this with the javascript canvas. No extra API's. The only HTML
 
 Let's kick things off with some initial setup. You're not going to see anything render here, because these are the primary lines to setting up the canvas and context which we use to draw.
 
-<div id="tmd-1" class="tmd-trigger" data-from="0" data-action="replace" data-to="all">
+<div id="tmd-1" class="tmd-trigger" data-from="0">
 {{< highlight js "linenos=table,linenostart=1" >}}
 var canvas = document.querySelector('canvas');
 var context = canvas.getContext('2d');
@@ -23,7 +23,6 @@ var size = window.innerWidth;
 
 canvas.width = size;
 canvas.height = size;
- 
 {{< / highlight >}}
 </div>
 
@@ -33,9 +32,8 @@ Our initial plan of attack here is to create the lines on the canvas, which will
 
 Let's get some base variables in here: `step`, which will be the steps in pixels between our points, and an array called `lines`, which is going to hold our lines.
 
-<div id="tmd-2" class="tmd-trigger" data-from="9" data-action="replace" data-to="all">
+<div id="tmd-2" class="tmd-trigger" data-from="9">
 {{< highlight js "linenos=table,linenostart=9" >}}
-
 var step = 10;
 var lines = [];
 {{< / highlight >}}
@@ -43,9 +41,8 @@ var lines = [];
 
 Now we'll write a function to prepare our lines. A line will consist of a series of points with `x` and `y` properties.
 
-<div id="tmd-3" class="tmd-trigger" data-from="15" data-action="replace" data-to="all">
-{{< highlight js "linenos=table,linenostart=11" >}}
-  
+<div class="tmd-trigger" data-from="12">
+{{< highlight js "linenos=table,linenostart=12" >}}
 // Create the lines
 for( var i = step; i <= size - step; i += step) {
     
@@ -56,15 +53,13 @@ for( var i = step; i <= size - step; i += step) {
   } 
   lines.push(line);
 }
-
 {{< / highlight >}}
 </div>
 
 Our next step will be to draw these lines. Again, we'll start simple to get something on the page, and we will expand on it later.
 
-<div id="tmd-4" class="tmd-trigger" data-from="24" data-action="replace" data-to="all">
-{{< highlight js "linenos=table,linenostart=22" >}}
-  
+<div class="tmd-trigger" data-from="23">
+{{< highlight js "linenos=table,linenostart=23" >}}
 // Do the drawing
 for(var i = 0; i < lines.length; i++) {
 
@@ -82,26 +77,26 @@ for(var i = 0; i < lines.length; i++) {
 
 Amazing, we have lines on our canvas! Now, the next job we have is to displace them. We will do that up in our first loop, where we create the points. 
 
-<div id="tmd-5" class="tmd-trigger" data-from="17" data-action="replace" data-to="18">
+<div id="tmd-5" class="tmd-trigger" data-from="17" data-to="18" data-indent="2">
 {{< highlight js "linenos=table,linenostart=17" >}}
-  var random = Math.random() * 10;
-    var point = {x: j, y: i + random};
+var random = Math.random() * 10;
+var point = {x: j, y: i + random};
 {{< / highlight >}}
 </div>
 
 Ahh, there we have it. Our lines are now jumping all over the place, just as planned. The next step is to get them to distort in the areas that we want—namely, more distorted towards the center, and less towards the edges. We are going to do this with an absolute function.
 
-<div id="tmd-5" class="tmd-trigger" data-from="17" data-action="replace" data-to="18">
+<div class="tmd-trigger" data-from="17" data-to="18" data-indent="2">
 {{< highlight js "linenos=table,linenostart=17" >}}
-    var distanceToCenter = Math.abs(j - size / 2);
-    var variance = Math.max(size / 2 - 50 - distanceToCenter, 0);
-    var random = Math.random() * variance / 2 * -1;
+var distanceToCenter = Math.abs(j - size / 2);
+var variance = Math.max(size / 2 - 50 - distanceToCenter, 0);
+var random = Math.random() * variance / 2 * -1;
 {{< / highlight >}}
 </div>
 
 We can see here that we've made something a little messy. and that we can see through each line, which doesn't look great. We're going to use a `fill` to cover those up. First we'll set the fill style.
 
-<div id="tmd-6" class="tmd-trigger" data-from="8" data-action="inject" data-to="8">
+<div id="tmd-6" class="tmd-trigger" data-from="8" data-to="8">
 {{< highlight js "linenos=table,linenostart=8" >}}
 context.fillStyle = '#f9f9f9';
 context.lineWidth = 2;
@@ -110,7 +105,7 @@ context.lineWidth = 2;
 
 And then we will add in the fill command after the line is drawn. This covers up the messy lines beneath each layer.
 
-<div id="tmd-7" class="tmd-trigger" data-from="37" data-action="inject" data-to="37">
+<div id="tmd-7" class="tmd-trigger" data-from="37" data-to="37">
 {{< highlight js "linenos=table,linenostart=37" >}}
   context.fill();
 {{< / highlight >}}
@@ -118,7 +113,7 @@ And then we will add in the fill command after the line is drawn. This covers up
 
 We're getting so close now. The only piece left is to make the lines much less jagged. To do this, we're going to use quadratic curves, and create control points between each one to create a smooth path. The final `quadraticCurveTo` is the last joining step.
 
-<div id="tmd-8" class="tmd-trigger" data-from="33" data-action="replace" data-to="37">
+<div id="tmd-8" class="tmd-trigger" data-from="33" data-to="37">
 {{< highlight js "linenos=table,linenostart=33" >}}
   for( var j = 0; j < lines[i].length - 2; j++) {
     var xc = (lines[i][j].x + lines[i][j + 1].x) / 2;

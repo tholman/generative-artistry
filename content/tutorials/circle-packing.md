@@ -12,7 +12,7 @@ Circle packing is such a fantastic effect, it looks infinitely complex, while al
 
 As usual, we're going to begin with a small, clean canvas.
 
-<div class="tmd-trigger" data-from="0" data-action="replace" data-to="all">
+<div class="tmd-trigger" data-from="0">
 {{< highlight js "linenos=table,linenostart=1" >}}
 var canvas = document.querySelector('canvas');
 var context = canvas.getContext('2d');
@@ -38,7 +38,7 @@ Our steps will be:
 
 So, we have an array of `circles`, a `totalCircles`, a min & max `circleSize` and a `createCircleAttempts`. Lets get this in code.
 
-<div class="tmd-trigger" data-from="10" data-action="replace" data-to="all">
+<div class="tmd-trigger" data-from="10">
 {{< highlight js "linenos=table,linenostart=10" >}}
 var circles = [];
 var minRadius = 2;
@@ -51,7 +51,7 @@ var createCircleAttempts = 500;
 
 Now we will spec out our process. We will make a `createCircle` and `doesCircleHaveACollision` function, and then fill it in with our goals... including calling the `createAndDrawCircle` function once for each of our `totalCircles` variable
 
-<div class="tmd-trigger" data-from="16" data-action="replace" data-to="all">
+<div class="tmd-trigger" data-from="16">
 {{< highlight js "linenos=table,linenostart=16" >}}
 function createAndDrawCircle() {
   
@@ -81,7 +81,7 @@ This is the fun part, we can go through our functions and fill them in. If we ta
 
 First, we'll start with creating a circle object, we'll give it an `x`, `y` and a `radius`
 
-<div class="tmd-trigger" data-from="18" data-action="replace" data-to="20">
+<div class="tmd-trigger" data-from="18" data-to="20">
 {{< highlight js "linenos=table,linenostart=19" >}}
   var newCircle = {
     x: Math.floor(Math.random() * size),
@@ -93,7 +93,7 @@ First, we'll start with creating a circle object, we'll give it an `x`, `y` and 
 
 Now, we'll add it to our list of circles, and draw it... we didn't really need to do this just yet, but being able to see what we're coding render out really helps with the process.
 
-<div class="tmd-trigger" data-from="27" data-action="replace" data-to="28">
+<div class="tmd-trigger" data-from="27" data-to="28">
 {{< highlight js "linenos=table,linenostart=27" >}}
   circles.push(newCircle);
   context.beginPath();
@@ -104,7 +104,7 @@ Now, we'll add it to our list of circles, and draw it... we didn't really need t
 
 Awesome, and there we have it, tiny circles all over our screen. Next, we can look at growing them. We will do this 1 unit at a time, and when they collide, we'll take one step back, and break out of the loop.
 
-<div class="tmd-trigger" data-from="24" data-action="replace" data-to="26">
+<div class="tmd-trigger" data-from="24" data-to="26">
 {{< highlight js "linenos=table,linenostart=24" >}}
   for(var radiusSize = minRadius; radiusSize < maxRadius; radiusSize++) {
     newCircle.radius = radiusSize;
@@ -122,7 +122,7 @@ The way that we tell if circles have a collision, is a little bit of trigonometr
 
 To get the distance between the two center points, we use `pythagoras theorem` (woah, that high school math coming in handy!)
 
-<div class="tmd-trigger" data-from="39" data-action="replace" data-to="42">
+<div class="tmd-trigger" data-from="39" data-to="42">
 {{< highlight js "linenos=table,linenostart=38" >}}
   for(var i = 0; i < circles.length; i++) {
     var otherCircle = circles[i];
@@ -144,7 +144,7 @@ We're going to use a loop in the creation area now as well, its a little ineffic
 
 If the circle doesn't find a safe place to draw, the attempt is abandoned.
 
-<div class="tmd-trigger" data-from="18" data-action="replace" data-to="23">
+<div class="tmd-trigger" data-from="18" data-to="23">
 {{< highlight js "linenos=table,linenostart=18" >}}
   var newCircle;
   var circleSafeToDraw = false;
@@ -173,7 +173,7 @@ If the circle doesn't find a safe place to draw, the attempt is abandoned.
 
 Wow, now we've got some beautiful circles, all packed in! There's only one little step more to do, and that is to trigger a collision when they hit the wall as well as each other. We'll break that into two if statements, one checking the top and bottom, and one checking the left and right.
 
-<div class="tmd-trigger" data-from="65" data-action="insert" data-to="65">
+<div class="tmd-trigger" data-from="65" data-to="65">
 {{< highlight js "linenos=table,linenostart=64" >}}
 
   if ( circle.x + circle.radius >= size ||

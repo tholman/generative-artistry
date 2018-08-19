@@ -16,7 +16,7 @@ This effect triangular meshing effect is often shown off in libraries and shown 
 
 As usual we begin with a little setup code, a square canvas. 
 
-<div class="tmd-trigger" data-from="0" data-action="replace" data-to="all">
+<div class="tmd-trigger" data-from="0">
 {{< highlight js "linenos=table,linenostart=1" >}}
 var canvas = document.querySelector('canvas');
 var context = canvas.getContext('2d');
@@ -35,7 +35,7 @@ Every coordinate will be represented by an object with 2 properties: `x` and `y`
 
 The space between lines and columns is defined by the variable `gap`, we'll draw these circles so we can see how our grid is placed out on the canvas.
 
-<div class="tmd-trigger" data-from="10" data-action="inject" data-to="10">
+<div class="tmd-trigger" data-from="10" data-to="10">
 {{< highlight js "linenos=table,linenostart=9" >}}
 var line,
     lines = [],
@@ -59,7 +59,7 @@ Now, we're going to displace every second line on the x axis. We do this by alte
 
 We can see that the new pattern is shaping up to be a mesh of regular triangles.
 
-<div class="tmd-trigger" data-from="8" data-action="replace" data-to="23">
+<div class="tmd-trigger" data-from="10" data-to="26">
 {{< highlight js "linenos=table,linenostart=9" >}}
 var line, dot,
     odd = false, 
@@ -78,7 +78,6 @@ for (var y = gap / 2; y <= size; y+= gap) {
   }
   lines.push(line)
 }
-
 {{< / highlight >}}
 </div>
 
@@ -86,8 +85,8 @@ The next step will be using the dots to draw the triangles.
 
 To make our life easier let's make a function that take the 3 coordinates of a triangle and draw them together.
 
-<div class="tmd-trigger" data-from="26" data-action="inject" data-to="26">
-{{< highlight js "linenos=table,linenostart=26" >}}
+<div class="tmd-trigger" data-from="28">
+{{< highlight js "linenos=table,linenostart=28" >}}
 function drawTriangle(pointA, pointB, pointC) {
   context.beginPath();
   context.moveTo(pointA.x, pointA.y);
@@ -106,8 +105,8 @@ This part might be a bit complex to understand. The script is going to go throug
 
 This will give us an array, containing each triangles specific coordinates. Looking something like [`a1`, `b1`, `a2`], [`b1`, `a2`, `b2`], [`a2`, `b2`, `a3`]...
 
-<div class="tmd-trigger" data-from="36" data-action="inject" data-to="36">
-{{< highlight js "linenos=table,linenostart=33" >}}
+<div class="tmd-trigger" data-from="38" data-action="inject">
+{{< highlight js "linenos=table,linenostart=38" >}}
 var dotLine;
 odd = true;
 
@@ -129,8 +128,8 @@ We have a now a regular triangle mesh, we are one detail away to let the magic h
 
 Every dot is a `gap` away from the surrounding dots. So a dot can be moved in this area without overlapping with other dots. Let's use a bit of `Math.random()` to add get a random position in this area.
 
-<div class="tmd-trigger" data-from="17" data-action="replace" data-to="22">
-{{< highlight js "linenos=table,linenostart=16" >}}
+<div class="tmd-trigger" data-from="20" data-action="replace" data-to="23">
+{{< highlight js "linenos=table,linenostart=20" >}}
     line.push({
       x: x + (Math.random()*.8 - .4) * gap  + (odd ? gap/2 : 0),
       y: y + (Math.random()*.8 - .4) * gap,
@@ -140,8 +139,8 @@ Every dot is a `gap` away from the surrounding dots. So a dot can be moved in th
 
 And for a little extra generative fun, lets add in some grays! Only 16 shades. No more.
 
-<div class="tmd-trigger" data-from="32" data-action="inject" data-to="32">
-{{< highlight js "linenos=table,linenostart=30" >}}
+<div class="tmd-trigger" data-from="36" data-action="inject" data-to="36">
+{{< highlight js "linenos=table,linenostart=36" >}}
   var gray = Math.floor(Math.random()*16).toString(16);
   context.fillStyle = '#' + gray + gray + gray; 
   context.fill();
