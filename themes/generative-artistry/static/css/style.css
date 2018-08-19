@@ -110,7 +110,7 @@ article:nth-child(odd) + footer {
 }
 
 .article-content {
-  background: #000000dd;
+  background: rgba(0, 0, 0, 0.85);
   font-weight: lighter;
   vertical-align: top;
   position: relative;
