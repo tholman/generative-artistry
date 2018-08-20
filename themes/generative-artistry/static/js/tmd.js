@@ -76,7 +76,7 @@
         var rect = this.element.getBoundingClientRect();
 
         // 1/3 of rect is at 1/2 of window
-        return rect.y + rect.height / 3 < window.innerHeight / 2;
+        return rect.top + rect.height / 3 < window.innerHeight / 2;
       }
     }]);
     return CodeBlock;
