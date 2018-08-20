@@ -37,7 +37,15 @@
       this.to = element.getAttribute('data-to');
       this.indent = parseInt(element.getAttribute('data-indent')) || 0;
 
-      this.code = this.prepareCode(element.querySelector(codeSelector).innerText, tabSize);
+      var code = null;
+      if (codeSelector) {
+        code = element.querySelector(codeSelector).innerText;
+      } else {
+        code = element.innerText;
+      }
+
+      this.code = this.prepareCode(code, tabSize);
+
       this.lines = this.code.split('\n').length;
 
       // Set "TO" value to from + lines it isn't set
@@ -135,6 +143,7 @@
       value: function executeBlock(block) {
 
         if (this.hasTyped) {
+          this.hasTyped = false;
           this.replaceWith(this.lastExecuted);
         }
 
@@ -226,6 +235,7 @@
       this.savedSteps = [this.editorManager.getCode()];
 
       this.throttleScroll = this.throttleScroll.bind(this);
+      this.sendCode = this.sendCode.bind(this);
       this.create();
     }
 
@@ -289,6 +299,12 @@
       key: 'destroy',
       value: function destroy() {
         window.removeEventListener('scroll', this.throttleScroll);
+      }
+    }, {
+      key: 'sendCode',
+      value: function sendCode() {
+        var currentCode = this.editorManager.getCode();
+        this.iframeManager.sendCode(currentCode);
       }
     }]);
     return TutorialMarkdown;

@@ -46,6 +46,7 @@
     <script>
 
         require.config({ paths: { 'vs': '/js/libs/monaco-editor/min/vs' }});
+        var tmd;
 
         require(['vs/editor/editor.main'], function() {
           var editor = monaco.editor.create(document.querySelector('#tutorial-code'), {
@@ -65,7 +66,7 @@
 
           editor.getModel().updateOptions({ tabSize: 2 })
 
-          var TMD = new TutorialMarkdown({
+          tmd = new TutorialMarkdown({
             editor: {
               editor: editor,
                api: monaco
@@ -76,6 +77,10 @@
                codeSelector: '.lntd:nth-child(2) .language-js' // Selector for the code WITHIN the block
              }
           })
+        })
+
+        document.querySelector('.tutorial-send-code').addEventListener('click', function() {
+          tmd.sendCode()
         })
     </script>
 
