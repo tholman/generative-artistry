@@ -1,4 +1,4 @@
-baseURL = "http://generativeartistry.com"
+baseURL = "https://generativeartistry.com"
 languageCode = "en-us"
 title = "Generative Artistry"
 pygmentsUseClasses=true
