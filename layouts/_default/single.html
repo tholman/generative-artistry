@@ -46,10 +46,10 @@
     <script>
 
         require.config({ paths: { 'vs': '/js/libs/monaco-editor/min/vs' }});
-        var tmd;
+        var tmd, editor;
 
         require(['vs/editor/editor.main'], function() {
-          var editor = monaco.editor.create(document.querySelector('#tutorial-code'), {
+          editor = monaco.editor.create(document.querySelector('#tutorial-code'), {
             value: [
               '// Welcome to Tutorial Markdown.',
               '// start scrolling, and we\'ll',
