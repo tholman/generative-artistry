@@ -1,5 +1,4 @@
 baseURL = "http://generativeartistry.com"
 languageCode = "en-us"
 title = "Generative Artistry"
-theme="generative-artistry"
 pygmentsUseClasses=true
