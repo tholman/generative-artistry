@@ -301,6 +301,7 @@
       key: 'create',
       value: function create() {
         window.addEventListener('scroll', this.throttleScroll);
+        this.onScroll();
       }
     }, {
       key: 'destroy',
