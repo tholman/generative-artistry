@@ -95,27 +95,23 @@ var random = Math.random() * variance / 2 * -1;
 {{< / highlight >}}
 </div>
 
-We can see here that we've made something a little messy. And that we can see through each line, which doesn't look great. We're going to use a `fill` to cover those up. First we'll set the fill style.
+We can see here that we've made something a little messy and that we can see through each line, which doesn't look great. We're going to use a `fill` with a `globalCompositeOperation` of `destination-out` to fix this.
 
-<div id="tmd-6" class="tmd-trigger" data-from="9" data-to="9">
-{{< highlight js "linenos=table,linenostart=9" >}}
-context.fillStyle = '#f9f9f9';
-context.lineWidth = 2;
-{{< / highlight >}}
-</div>
+Global composite operations allow us to draw to the canvas in very interesting ways. For our case, we want to essentially "erase" our new shape from the existing lines above it. The `destination-out` mode works great for erasing from a canvas. Check out [this article](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/globalCompositeOperation) to learn more about canvas global composite operations.
 
-And then we will add in the fill command after the line is drawn. This covers up the messy lines beneath each layer.
-
-<div id="tmd-7" class="tmd-trigger" data-from="38" data-to="38">
-{{< highlight js "linenos=table,linenostart=38" >}}
+<div id="tmd-6" class="tmd-trigger" data-from="37" data-to="37">
+{{< highlight js "linenos=table,linenostart=37" >}}
+  context.save();
+  context.globalCompositeOperation = 'destination-out';
   context.fill();
+  context.restore();
 {{< / highlight >}}
 </div>
 
 We're getting so close now. The only piece left is to make the lines much less jagged. To do this, we're going to use quadratic curves, and create control points between each one to create a smooth path. The final `quadraticCurveTo` is the last joining step.
 
-<div id="tmd-8" class="tmd-trigger" data-from="34" data-to="38">
-{{< highlight js "linenos=table,linenostart=34" >}}
+<div id="tmd-7" class="tmd-trigger" data-from="33" data-to="37">
+{{< highlight js "linenos=table,linenostart=33" >}}
   for( var j = 0; j < lines[i].length - 2; j++) {
     var xc = (lines[i][j].x + lines[i][j + 1].x) / 2;
     var yc = (lines[i][j].y + lines[i][j + 1].y) / 2;
@@ -123,6 +119,15 @@ We're getting so close now. The only piece left is to make the lines much less j
   }
 
   context.quadraticCurveTo(lines[i][j].x, lines[i][j].y, lines[i][j + 1].x, lines[i][j + 1].y);
+
+{{< / highlight >}}
+</div>
+
+This looks great! Now we just need a little breathing room on top. Let's prevent the top lines from going off the top of the canvas. We can do this by starting the loop at a higher index to skip the drawing of a few of the top lines.
+
+<div id="tmd-8" class="tmd-trigger" data-from="28" data-to="29">
+{{< highlight js "linenos=table,linenostart=28" >}}
+for(var i = 5; i < lines.length; i++) {
 {{< / highlight >}}
 </div>
 
