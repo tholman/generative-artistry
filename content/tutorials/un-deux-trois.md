@@ -10,7 +10,7 @@ teaser = "There's no real generative art showcase complete without something fro
 
 [Vera Molnár](https://en.wikipedia.org/wiki/Vera_Molnar) is a true inspiration to anyone interested in generative art. She is truly one of the very first people to be creating digital art, and one of the most compelling to follow. In this tutorial, we're going to reproduce one of her works, Un Deux Trois.
 
-We're going to use a somewhat standard setup here, getting our canvas and context which we will use to draw, as well as setting the canvas size.
+We're going to use a somewhat standard setup here, getting our canvas and context which we will use to draw. We will also set the size of the canvas and adjust it based on the user's device pixel ratio, or pixel density. This ensures that the final result is crisp on all monitors. 
 
 <div class="tmd-trigger" data-from="0">
 {{< highlight js "linenos=table,linenostart=1" >}}

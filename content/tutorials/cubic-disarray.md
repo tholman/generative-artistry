@@ -12,7 +12,7 @@ teaser = "Georg Nees was one of the pioneers of computer art. Cubic disarray is 
 
 The only HTML we have on the page is a `<canvas>` element at 320&times;320 pixels.
 
-As usual, here is our initial setup. You're not going to see anything render here, because these are the primary lines to setting up the canvas and context which we use to draw.
+As usual, here is our initial setup. You're not going to see anything render here, because these are the primary lines to setting up the canvas and context which we use to draw. We will also set the size of the canvas and adjust it based on the user's device pixel ratio, or pixel density. This ensures that the final result is crisp on all monitors.
 
 <div class="tmd-trigger" data-from="0">
 {{< highlight js "linenos=table,linenostart=1" >}}

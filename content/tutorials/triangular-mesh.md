@@ -14,7 +14,7 @@ This post is from the talented <a href="https://maxwellito.com/">maxwellito</a>,
 
 This triangular meshing effect is often shown off in libraries with SVG. Today we're going to build it with canvas! It's a great example of how a coordinate system and a little displacement can give clean beautiful effects.
 
-As usual we begin with a little setup code, a square canvas. 
+As usual we begin with a little setup code, a square canvas. We will also set the size of the canvas and adjust it based on the user's device pixel ratio, or pixel density. This ensures that the final result is crisp on all monitors.
 
 <div class="tmd-trigger" data-from="0">
 {{< highlight js "linenos=table,linenostart=1" >}}

@@ -12,7 +12,7 @@ The Joy Division album cover has a [cool history](https://blogs.scientificameric
 
 We're going to do this with the JavaScript canvas. No extra APIs. The only HTML we have on the page is a `<canvas>` element at 320&times;320 pixels.
 
-Let's kick things off with some initial setup. You're not going to see anything render here, because these are the primary lines to setting up the canvas and context which we use to draw.
+Let's kick things off with some initial setup. You're not going to see anything render here, because these are the primary lines to setting up the canvas and context which we use to draw. We will also set the size of the canvas and adjust it based on the user's device pixel ratio, or pixel density. This ensures that the final result is crisp on all monitors.
 
 <div id="tmd-1" class="tmd-trigger" data-from="0">
 {{< highlight js "linenos=table,linenostart=1" >}}
