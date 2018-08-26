@@ -11,15 +11,18 @@ function launchPrefil() {
   };
 
   if(window.editor) {
-    data.js = window.editor.getValue()
-    data.js = data.js.split('window.innerWidth').join('320')
+    data.js = window.editor.getValue();
+    data.js = data.js.split('window.innerWidth').join('320');
   }
 
   document.querySelector(("input[name=data]")).value = JSON.stringify(data);
-  form.submit()
+  form.submit();
 }
 
 document.querySelector('#codepen-prefil').addEventListener('click', function(e) {
   e.preventDefault();
-  launchPrefil()
-})
+  window.scrollTo(0,document.body.scrollHeight);
+  setTimeout(function() {
+    launchPrefil();
+  }, 0);
+});
