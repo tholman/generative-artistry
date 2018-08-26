@@ -8,8 +8,6 @@ teaser = "Packing circles into a tight space gives a beautiful effect, and it's 
 
 # Circle Packing
 
-![Circle Packing](/img/06-circle-packing.png)
-
 Circle packing is such a fantastic effect, it looks infinitely complex, while also being mathematically beautiful. In this tutorial, we're going to create a circle packing effect... Interestingly, this is a good example of an effect that isn't particularly efficient to run, but at the same time, will still be very quick! 
 
 As usual, we're going to begin with a small, clean canvas. We will also set the size of the canvas and adjust it based on the user's device pixel ratio, or pixel density. This ensures that the final result is crisp on all monitors.

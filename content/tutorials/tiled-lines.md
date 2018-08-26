@@ -8,8 +8,6 @@ teaser = "This demo is one of the most simplistic yet beautiful pieces of genera
 
 # Tiled Lines
 
-![Tiled Lines](/img/01-tiled-lines.png)
-
 I want to get going with some of the earliest but simplest programming art out there. I'm referring to the [10 PRINT](https://www.youtube.com/watch?v=m9joBLOZVEo) artwork initially coded for the [Commodore 64](https://en.wikipedia.org/wiki/Commodore_64). This work has been featured all over the place, and gives a really stunning effect for something so simple.
 
 We're going to do this with the JavaScript canvas. No extra APIs today. The only HTML we have on the page is a `<canvas>` element at 320&times;320 pixels.
@@ -28,6 +26,7 @@ canvas.height = size * dpr;
 context.scale(dpr, dpr);
 
 context.lineCap = 'square';
+context.lineWidth = 2;
 
 {{< / highlight >}}
 </div>
@@ -36,8 +35,8 @@ This will set us up with a canvas with a square size ~ and provide us with the e
 
 Now, let's create a draw function, which we will be using to draw. It's going to accept an x, y, width and height. Let's also call that draw function, even though it's empty.
 
-<div class="tmd-trigger" data-from="12">
-{{< highlight js "linenos=table,linenostart=12" >}}
+<div class="tmd-trigger" data-from="13">
+{{< highlight js "linenos=table,linenostart=13" >}}
 function draw(x, y, width, height) {
   // TODO: Functionality here
 }
@@ -50,8 +49,8 @@ The way that this is built out at the moment, we will use the `draw` function to
 
 So how about we draw something. Let's start with a simple line.
 
-<div class="tmd-trigger" data-from="13" data-to="14" data-indent="1">  
-{{< highlight js "linenos=table,linenostart=13" >}}
+<div class="tmd-trigger" data-from="14" data-to="15" data-indent="1">  
+{{< highlight js "linenos=table,linenostart=14" >}}
 context.moveTo(x, y);
 context.lineTo(x + width, y + height);   
 context.stroke();
@@ -64,8 +63,8 @@ To make it "generative" we'll need to change it so that 50% of the time, it will
 
 To use that, we will add a random chance boolean and an if statement.
 
-<div class="tmd-trigger" data-from="13" data-to="16" data-indent="1">  
-{{< highlight js "linenos=table,linenostart=13" >}}
+<div class="tmd-trigger" data-from="14" data-to="17" data-indent="1">  
+{{< highlight js "linenos=table,linenostart=14" >}}
 var leftToRight = Math.random() >= 0.5;
 
 if(leftToRight) {
@@ -94,8 +93,8 @@ var step = 80;
 
 This variable is what we will use to step through our image. In this case, our width is 320, and our step is 80, so we know it fits in 4 times.
 
-<div class="tmd-trigger" data-from="27" data-to="28">  
-{{< highlight js "linenos=table,linenostart=27" >}}
+<div class="tmd-trigger" data-from="28" data-to="29">  
+{{< highlight js "linenos=table,linenostart=28" >}}
 for(var x = 0; x < size; x += step) {
   for(var y = 0; y < size; y+= step) {
     draw(x, y, step, step);    

@@ -8,8 +8,6 @@ teaser = "Georg Nees was one of the pioneers of computer art. Cubic disarray is 
 
 # Cubic Disarray
 
-![Cubic Disarray](/img/03-cubic-disarray.png)
-
 [Georg Nees](https://en.wikipedia.org/wiki/Georg_Nees)' fantastic generative art is a true inspiration. In this tutorial, we're going to build one of his pieces: Cubic Disarray.
 
 The only HTML we have on the page is a `<canvas>` element at 320&times;320 pixels.
@@ -20,13 +18,13 @@ As usual, here is our initial setup. You're not going to see anything render her
 {{< highlight js "linenos=table,linenostart=1" >}}
 var canvas = document.querySelector('canvas');
 var context = canvas.getContext('2d');
-context.lineWidth = 2;
 
 var size = window.innerWidth;
 var dpr = window.devicePixelRatio;
 canvas.width = size * dpr;
 canvas.height = size * dpr;
 context.scale(dpr, dpr);
+context.lineWidth = 2;
 
 var squareSize = 30;
 {{< / highlight >}}
