@@ -1,4 +1,7 @@
 baseURL = "https://generativeartistry.com"
 languageCode = "en-us"
 title = "Generative Artistry"
-pygmentsUseClasses=true
+pygmentsUseClasses = true
+
+[params]
+description = "Generative art tutorials, news and love."
