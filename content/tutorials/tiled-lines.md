@@ -66,7 +66,7 @@ To use that, we will add a random chance boolean and an if statement.
 {{< highlight js "linenos=table,linenostart=13" >}}
 var leftToRight = Math.random() >= 0.5;
 
-if( leftToRight ) {
+if(leftToRight) {
   context.moveTo(x, y);
   context.lineTo(x + width, y + height);    
 } else {
@@ -94,8 +94,8 @@ This variable is what we will use to step through our image. In this case, our w
 
 <div class="tmd-trigger" data-from="27" data-to="28">  
 {{< highlight js "linenos=table,linenostart=27" >}}
-for( var x = 0; x < size; x += step) {
-  for( var y = 0; y < size; y+= step ) {
+for(var x = 0; x < size; x += step) {
+  for(var y = 0; y < size; y+= step) {
     draw(x, y, step, step);    
   }
 }

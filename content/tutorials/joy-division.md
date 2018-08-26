@@ -45,12 +45,12 @@ Now we'll write a function to prepare our lines. A line will consist of a series
 <div class="tmd-trigger" data-from="13">
 {{< highlight js "linenos=table,linenostart=13" >}}
 // Create the lines
-for( var i = step; i <= size - step; i += step) {
+for(var i = step; i <= size - step; i += step) {
     
   var line = [];
-  for( var j = step; j <= size - step; j+= step ) {
+  for(var j = step; j <= size - step; j+= step) {
     var point = {x: j, y: i};
-    line.push(point)
+    line.push(point);
   } 
   lines.push(line);
 }
@@ -65,9 +65,9 @@ Our next step will be to draw these lines. Again, we'll start simple to get some
 for(var i = 0; i < lines.length; i++) {
 
   context.beginPath();
-  context.moveTo(lines[i][0].x, lines[i][0].y)
+  context.moveTo(lines[i][0].x, lines[i][0].y);
   
-  for( var j = 0; j < lines[i].length; j++) {
+  for(var j = 0; j < lines[i].length; j++) {
     context.lineTo(lines[i][j].x, lines[i][j].y);
   }
 
@@ -112,7 +112,7 @@ We're getting so close now. The only piece left is to make the lines much less j
 
 <div id="tmd-7" class="tmd-trigger" data-from="33" data-to="37">
 {{< highlight js "linenos=table,linenostart=33" >}}
-  for( var j = 0; j < lines[i].length - 2; j++) {
+  for(var j = 0; j < lines[i].length - 2; j++) {
     var xc = (lines[i][j].x + lines[i][j + 1].x) / 2;
     var yc = (lines[i][j].y + lines[i][j + 1].y) / 2;
     context.quadraticCurveTo(lines[i][j].x, lines[i][j].y, xc, yc);

@@ -42,7 +42,7 @@ var line,
     lines = [],
     gap = size / 7;
 
-for (var y = gap / 2; y <= size; y+= gap) {
+for(var y = gap / 2; y <= size; y+= gap) {
   line = [];
   for (var x = gap / 2; x <= size; x+= gap) {
     line.push({x: x, y: y});
@@ -67,10 +67,10 @@ var line, dot,
     lines = [],
     gap = size / 8;
 
-for (var y = gap / 2; y <= size; y+= gap) {
+for(var y = gap / 2; y <= size; y+= gap) {
   odd = !odd;
   line = [];
-  for (var x = gap / 4; x <= size; x+= gap) {
+  for(var x = gap / 4; x <= size; x+= gap) {
     dot = {x: x + (odd ? gap/2 : 0), y: y};
     line.push(dot);
     context.beginPath();
@@ -111,14 +111,14 @@ This will give us an array, containing each triangles specific coordinates. Look
 var dotLine;
 odd = true;
 
-for (var y = 0; y < lines.length - 1; y++) {
+for(var y = 0; y < lines.length - 1; y++) {
   odd = !odd;
   dotLine = [];
-  for (var i = 0; i < lines[y].length; i++) {
+  for(var i = 0; i < lines[y].length; i++) {
     dotLine.push(odd ? lines[y][i]   : lines[y+1][i]);
     dotLine.push(odd ? lines[y+1][i] : lines[y][i]);
   }
-  for (var i = 0; i < dotLine.length - 2; i++) {
+  for(var i = 0; i < dotLine.length - 2; i++) {
     drawTriangle(dotLine[i], dotLine[i+1], dotLine[i+2]);
   }
 }

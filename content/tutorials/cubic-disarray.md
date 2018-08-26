@@ -48,8 +48,8 @@ So how about we draw something. I'm going to loop through and fill the screen  w
 
 <div class="tmd-trigger" data-from="19">  
 {{< highlight js "linenos=table,linenostart=19" >}}
-for( var i = squareSize; i <= size - squareSize; i += squareSize) {
-  for( var j = squareSize; j <= size - squareSize; j+= squareSize ) {
+for(var i = squareSize; i <= size - squareSize; i += squareSize) {
+  for(var j = squareSize; j <= size - squareSize; j+= squareSize) {
     context.save();
     context.translate(i, j);
     draw(squareSize, squareSize);
@@ -88,7 +88,7 @@ Now, we apply the translations and rotations. (Suddenly all that setup paid off!
 
 <div class="tmd-trigger" data-from="31" data-to="32" data-indent="2">  
 {{< highlight js "linenos=table,linenostart=31" >}}
-context.translate( i + translateAmt + offset, j + offset)
+context.translate(i + translateAmt + offset, j + offset);
 context.rotate(rotateAmt);
 {{< / highlight >}}
 </div>

@@ -64,9 +64,9 @@ This is using `context.translate` to "move" the canvas to an x & y position, and
 
 <div class="tmd-trigger" data-from="30">
 {{< highlight js "linenos=table,linenostart=30" >}}
-for( var y = step; y < size - step; y += step) {
-  for( var x = step; x < size - step; x+= step ) {
-      draw(x, y, step, step, [0.5]);      
+for(var y = step; y < size - step; y += step) {
+  for(var x = step; x < size - step; x+= step) {
+    draw(x, y, step, step, [0.5]);      
   }
 }
 {{< / highlight >}}
@@ -76,9 +76,9 @@ So we can see now we're drawing a small line in the middle (`0.5`) of each squar
 
 <div class="tmd-trigger" data-from="32" data-to="33">
 {{< highlight js "linenos=table,linenostart=30" >}}
-    if( y < aThirdOfHeight) {
+    if(y < aThirdOfHeight) {
       draw(x, y, step, step, [0.5]);   
-    } else if ( y < aThirdOfHeight * 2) {
+    } else if(y < aThirdOfHeight * 2) {
       draw(x, y, step, step, [0.2, 0.8]);      
     } else {
       draw(x, y, step, step, [0.1, 0.5, 0.9]);      

@@ -111,7 +111,7 @@ Awesome, and there we have it, tiny circles all over our screen. Next, we can lo
   for(var radiusSize = minRadius; radiusSize < maxRadius; radiusSize++) {
     newCircle.radius = radiusSize;
     if(doesCircleHaveACollision(newCircle)){
-      newCircle.radius--
+      newCircle.radius--;
       break;
     } 
   }
@@ -150,7 +150,7 @@ If the circle doesn't find a safe place to draw, the attempt is abandoned.
 {{< highlight js "linenos=table,linenostart=20" >}}
   var newCircle;
   var circleSafeToDraw = false;
-  for( var tries = 0; tries < createCircleAttempts; tries++) {
+  for(var tries = 0; tries < createCircleAttempts; tries++) {
     newCircle = {
       x: Math.floor(Math.random() * size),
       y: Math.floor(Math.random() * size),
@@ -177,13 +177,13 @@ Wow, now we've got some beautiful circles, all packed in! There's only one littl
 <div class="tmd-trigger" data-from="67" data-to="67">
 {{< highlight js "linenos=table,linenostart=66" >}}
 
-  if ( circle.x + circle.radius >= size ||
-     circle.x - circle.radius <= 0 ) {
+  if(circle.x + circle.radius >= size ||
+     circle.x - circle.radius <= 0) {
     return true;
   }
     
-  if (circle.y + circle.radius >= size ||
-      circle.y - circle.radius <= 0 ) {
+  if(circle.y + circle.radius >= size ||
+      circle.y - circle.radius <= 0) {
     return true;
   }
   
