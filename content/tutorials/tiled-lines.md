@@ -8,6 +8,8 @@ teaser = "This demo is one of the most simplistic yet beautiful pieces of genera
 
 # Tiled Lines
 
+![Tiled Lines](/img/01-tiled-lines.png)
+
 I want to get going with some of the earliest but simplest programming art out there. I'm referring to the [10 PRINT](https://www.youtube.com/watch?v=m9joBLOZVEo) artwork initially coded for the [Commodore 64](https://en.wikipedia.org/wiki/Commodore_64). This work has been featured all over the place, and gives a really stunning effect for something so simple.
 
 We're going to do this with the JavaScript canvas. No extra APIs today. The only HTML we have on the page is a `<canvas>` element at 320&times;320 pixels.

@@ -8,6 +8,8 @@ teaser = "Georg Nees was one of the pioneers of computer art. Cubic disarray is 
 
 # Cubic Disarray
 
+![Cubic Disarray](/img/03-cubic-disarray.png)
+
 [Georg Nees](https://en.wikipedia.org/wiki/Georg_Nees)' fantastic generative art is a true inspiration. In this tutorial, we're going to build one of his pieces: Cubic Disarray.
 
 The only HTML we have on the page is a `<canvas>` element at 320&times;320 pixels.

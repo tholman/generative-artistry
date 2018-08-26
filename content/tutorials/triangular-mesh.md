@@ -8,6 +8,8 @@ teaser = "Triangular meshes are the foundations of 3D modeling, but building one
 
 # Triangular Mesh
 
+![Triangular Mesh](/img/04-triangular-mesh.png)
+
 <p class="tutorial-contributor">
 This post is from the talented <a href="https://maxwellito.com/">maxwellito</a>, if you're interested in posting, you can open up a <a href="https://github.com/tholman/generative-artistry/issues/6">proposal</a>, just like he did!
 </p>
