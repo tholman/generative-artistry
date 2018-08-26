@@ -177,6 +177,14 @@ article:nth-child(odd) + footer {
   font-size: 28px;
 }
 
+.tutorial-content img {
+  background: #f9f9f9;
+  display: block;
+  margin-bottom: 20px;
+  max-width: 320px;
+  width: 100%;
+}
+
 .tutorial-content p {
   margin-bottom: 20px;
   line-height: 22px;

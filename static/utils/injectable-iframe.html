@@ -4,8 +4,6 @@
       window.addEventListener("message", receiveMessage, false);
 
       function receiveMessage(event) {
-        // if (event.origin !== "http://example.org:8080")
-        //   return;
         var scripts = document.getElementById('injected');
         if( scripts ) {
           scripts.parentNode.removeChild(scripts);
@@ -22,6 +20,11 @@
       html, body {
         margin: 0px;
         padding: 0px;
+      }
+      canvas {
+        display: block;
+        width: 320px;
+        height: 320px;
       }
     </style>
   </head>
