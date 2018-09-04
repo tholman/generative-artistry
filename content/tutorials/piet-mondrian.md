@@ -3,14 +3,14 @@ title = "Piet Mondrian"
 date = 2018-08-27
 number = "08"
 image = "/img/08-mondrian.png"
-teaser = "Piet Mondrians art is world renoun, there's also something about his style that makes it irresistable to try to replicate with code."
+teaser = "Piet Mondrian's art is world renowned. There's also something about his style that makes it irresistible to try to replicate with code."
 +++
 
 # Piet Mondrian
 
-Replicating Piet Mondrians art with code is no easy task, in fact honestly I'd say there's no real way of pinning down his creations entirely with code, they were hand made. That said, we can try to replicate something within the realm of what would have been one of Piets works... so thats what we will do in this tutorial... and yes, we will add the color as well.
+Replicating [Piet Mondrian's](https://en.wikipedia.org/wiki/Piet_Mondrian) art with code is no easy task, in fact honestly I'd say there's no real way of pinning down his creations entirely with code, they were hand made. That said, we can try to replicate something within the realm of what would have been one of Piet's works... so that's what we will do in this tutorial... and yes, we will add the color as well.
 
-As usual, here is our initial setup. Using `window.devicePixelRatio` to scale the canvas on retina screens, and setting out canvas size, with only a html `<canvas>` on the page.
+As usual, here is our initial setup. Using `window.devicePixelRatio` to scale the canvas on retina screens, and setting our canvas size, with only a html `<canvas>` on the page.
 
 <div class="tmd-trigger" data-from="0">
 {{< highlight js "linenos=table,linenostart=1" >}}
@@ -90,7 +90,7 @@ splitSquaresWith({y: 160})
 {{< / highlight >}}
 </div>
 
-You can see at the bottom that I'm also calling the split the squares on the x and y, both in the middle. If these work, we'll know we can do a lot more splitting. But for now, these will be great for testing.
+You can see at the bottom that I'm also calling the split the squares on the `x` and `y`, both in the middle. If these work, we'll know we can do a lot more splitting. But for now, these will be great for testing.
 
 First, the `splitSquaresWith` function.
 
@@ -114,7 +114,7 @@ for (var i = squares.length - 1; i >= 0; i--) {
 {{< / highlight >}}
 </div>
 
-There's a bit going on here, including some cheeky little tricks"
+There's a bit going on here, including some cheeky little tricks.
 
 - `const { x, y } = coordinates` is extracting the `x` and `y` variables out of the object we're passing, eg `{x: 160}` or `{y: 160}`
 - We're looping backwards through the squares with `(var i = squares.length - 1; i >= 0; i--)` this is because we're taking elements **out** of the loop (and replacing them with 2 squares), looping backwards means the order will stay the same, and the new items won't be split again.
@@ -186,7 +186,7 @@ for (var i = 0; i < size; i += step) {
 {{< / highlight >}}
 </div>
 
-Whew, that was a lot of set up... we can get into the `random` now. Rather than splitting each and every square when we hit it, we'll only split then half the time.
+Whew, that was a lot of set up... we can get into the `random` now. Rather than splitting each and every square when we hit it, we'll only split them half the time.
 
 <div class="tmd-trigger" data-from="26" data-to="28" data-indent="3">
 {{< highlight js "linenos=table,linenostart=26" >}}
@@ -210,7 +210,7 @@ if(Math.random() > 0.5) {
 
 And there we have it, the shapes and structure we want! As always, with these tutorials you can hit the small arrow sitting between the editor and the demo and the code will rerun, if you press it a few times now, you'll see our Mondrian structure take a few different shapes.
 
-Lets add some color in. First the variables, using those beautiful red, blue and yellow.
+Let's add some color in. First the variables, using those beautiful red, blue and yellow colors.
 
 <div class="tmd-trigger" data-from="11" data-to="11">
 {{< highlight js "linenos=table,linenostart=11" >}}
@@ -264,7 +264,4 @@ var step = size / 7;
 {{< / highlight >}}
 </div>
 
-And there we have, a Mondrian. Please, hit the link below to have a play on CodePen, play with the colors, how you apply them, play with the split percentages. Its all good fun!
-
-
-
+And there we have it, a Mondrian. Please, hit the link below to have a play on CodePen, play with the colors, how you apply them, play with the split percentages. It's all good fun!
