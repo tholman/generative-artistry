@@ -3,18 +3,18 @@ title = "Hypnotic Squares"
 date = 2018-08-26
 number = "07"
 image = "/img/07-hypnotic-squares.png"
-teaser = "William Kolomyjec was another of the great pioneers of generative art, this piece, hypnotic squares is a great example of recursion in action."
+teaser = "William Kolomyjec was another great pioneer of generative art. This piece, \"Hypnotic Squares\", is a great example of recursion in action."
 +++
 
 # Hypnotic Squares
 
-[William Kolomyjec](http://dada.compart-bremen.de/item/agent/644)'s work is again remeniscent of some of the old school generative works, focusing on simple shapes, tiling and recursion.
+[William Kolomyjec](http://dada.compart-bremen.de/item/agent/644)'s work is again reminiscent of some of the old school generative works, focusing on simple shapes, tiling and recursion.
 
-Today we're going to replicate a piece of his called Hypnotic Squares
+Today we're going to replicate a piece of his called Hypnotic Squares.
 
 The only HTML we have on the page is a `<canvas>` element at 320&times;320 pixels.
 
-As usual, here is our initial setup. Using `window.devicePixelRatio` to scale the canvas on retina screens, and setting out canvas size.
+As usual, here is our initial setup. Using `window.devicePixelRatio` to scale the canvas on retina screens, and setting our canvas size.
 
 <div class="tmd-trigger" data-from="0">
 {{< highlight js "linenos=table,linenostart=1" >}}
@@ -48,13 +48,13 @@ draw(0, 0, startSize, startSize, 0, 0, startSteps);
 {{< / highlight >}}
 </div>
 
-The `steps` in the draw function, is how many times our square will recurse inwards. Its a fixed variable now, but we will be able to make it a little bit more random later.
+The `steps` in the draw function, is how many times our square will recurse inwards. It's a fixed variable now, but we will be able to make it a little bit more random later.
 
 The `finalSize` is the smallest square we want to draw, when our squares start to get this small, we'll stop drawing.
 
 The `startSteps` will help us calculate a smaller and smaller square as we recurse.
 
-Lets make our `draw` function draw. We'll start with just a plain square.
+Let's make our `draw` function draw. We'll start with just a plain square.
 
 <div class="tmd-trigger" data-from="16" data-to="17" data-indent="1">
 {{< highlight js "linenos=table,linenostart=16" >}}
@@ -81,10 +81,10 @@ if(steps >= 0) {
 Woohoo, recursion! So let me explain whats going on above.
 
 - `newSize` is being calculated based on how many steps our square has remaining.
-- `newX` & `newX` is being calculated based making sure the new square fits inside the previous one
+- `newX` & `newY` is being calculated based on making sure the new square fits inside the previous one.
 - And then, the final parameter in the `draw` function is `steps - 1` which means we step closer and closer to 0.
 
-So you can see now if we change the `startSteps` variable, to a few differnt variations, we'll have different degree's of recursion.
+So you can see now if we change the `startSteps` variable, to a few differnt variations, we'll have different degrees of recursion.
 
 <div class="tmd-trigger" data-from="13" data-to="14">
 {{< highlight js "linenos=table,linenostart=14" >}}
@@ -119,7 +119,7 @@ newY = newY - ((y - newY) / (steps + 2)) * yMovement
 {{< / highlight >}}
 </div>
 
-This looks a little complex... we're calculating how big each step is going to be (difference between the bigger and smaller square sizes) and then dividing it by how many steps are left. The 1.6 is to make sure that the new square never quite touches the line of the previous one.
+This looks a little complex... we're calculating how big each step is going to be (difference between the bigger and smaller square sizes) and then dividing it by how many steps are left. The 2 is to make sure that the new square never quite touches the line of the previous one.
 
 Now, if we change around our draw function, you'll be able to see how it moves around and renders in different ways.
 
@@ -193,4 +193,4 @@ draw(x, y, startSize, startSize, xDirection, yDirection, startSteps - 1);
 {{< / highlight >}}
 </div>
 
-And there we have it! Hypnotic squares. This is a great example of some beautiful use of recursion, as well as the kind of art piece that can easily be expanded with some color, especially on a slightly larger canvas.
+And there we have it! Hypnotic Squares. This is a great example of some beautiful use of recursion, as well as the kind of art piece that can easily be expanded with some color, especially on a slightly larger canvas.
