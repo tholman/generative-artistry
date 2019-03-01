@@ -28,6 +28,16 @@ code {
 }
 
 /**
+ * Episodes
+ */
+
+.episode-content {
+  max-width: 690px;
+  margin: auto;
+  padding: 20px;
+}
+
+/**
  * Header & Footer
  */
 

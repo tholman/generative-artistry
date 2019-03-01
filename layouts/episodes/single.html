@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+  <head>
+    <title>{{ .Title }} | {{ $.Site.Title }}</title>
+
+    <meta charset="utf-8">
+    
+    <meta name="description" content="{{ .Params.teaser }} {{ $.Site.Params.Description }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
+  </head>
+  <body class="episode">
+
+    {{ partial "header.html" . }}
+
+    <div class="episode-content">
+      {{ .Content }}
+    </div>
+
+    {{ partial "tracking.html" . }}
+  </body>
+</html>

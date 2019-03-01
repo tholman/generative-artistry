@@ -1,8 +1,8 @@
 +++
 title = "Piet Mondrian"
 date = 2018-08-27
-number = "08"
 image = "/img/08-mondrian.png"
+iama = "tutorial"
 teaser = "Piet Mondrians art is world renoun, there's also something about his style that makes it irresistable to try to replicate with code."
 +++
 

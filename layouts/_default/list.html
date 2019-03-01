@@ -17,10 +17,11 @@
       {{ $paginator := .Paginate (where .Pages ".Params.type" "!=" "page") (index .Site.Params "paginate" | default 100) }}
       {{ if gt $paginator.TotalPages 0 }}
         {{ range $index, $page := $paginator.Pages }}
+        {{ $total := $paginator.TotalNumberOfElements }}
 
           <article>
             <div class="article-number">
-              {{ .Params.number }}
+              {{ printf "%02d" (sub $total $index) }}
             </div>
             
             <img class="article-image" src="{{ .Params.image }}">
@@ -37,7 +38,7 @@
               </p>
 
               <p class="article-links">
-                <a href="{{ .Permalink }}">Check out the tutorial</a>
+                <a href="{{ .Permalink }}">Check out the {{ .Params.iama }}</a>
               </p>
             </div>
           </article>

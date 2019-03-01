@@ -1,8 +1,8 @@
 +++
 title = "Tiled Lines"
 date = 2018-05-04T09:59:00-04:00
-number = "01"
 image = "/img/01-tiled-lines.png"
+iama = "tutorial"
 teaser = "This demo is one of the most simplistic yet beautiful pieces of generative art you can make. It's kinda famous in its own right, appearing on books and on all sorts of devices."
 +++
 
