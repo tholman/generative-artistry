@@ -1,6 +1,6 @@
 +++
 title = "Hypnotic Squares"
-date = 2018-08-26
+date = 2018-08-26T09:59:00-04:00
 image = "/img/07-hypnotic-squares.png"
 iama = "tutorial"
 teaser = "William Kolomyjec was another of the great pioneers of generative art, this piece, hypnotic squares is a great example of recursion in action."
