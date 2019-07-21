@@ -10,7 +10,7 @@
      xmlns:media="http://search.yahoo.com/mrss/">
   <channel> 
     <title>{{ with .Title }}{{.}} on {{ end }}{{ .Site.Title }}</title>
-    <atom:link href="{{ .Site.BaseURL }}/podcast.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="{{ .Site.BaseURL }}/episodes/index.xml" rel="self" type="application/rss+xml" />
     <link>{{ .Site.BaseURL }}</link>
     <description>Recent content {{ with .Title }}in {{.}} {{ end }}on {{ .Site.Title }}</description>
     <lastBuildDate>{{ .Date }}</lastBuildDate>
@@ -29,7 +29,7 @@
     <itunes:category text="Art">
         <itunes:category text="Visual Art" />
     </itunes:category>
-    <itunes:author>"Ruth John & Tim Holman"</itunes:author>
+    <itunes:author>Ruth John and Tim Holman</itunes:author>
     <itunes:owner>
         <itunes:name>"Ruth John"</itunes:name>
         <itunes:email>"rumyra@gmail.com"</itunes:email>
