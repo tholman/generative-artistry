@@ -32,7 +32,7 @@ code {
  */
 
 .episode-content {
-      max-width: 450px;
+  max-width: 500px;
   padding: 20px;
 }
 
@@ -267,7 +267,7 @@ form input {
 }
 
 .episode-content {
-	min-height: calc(100vh - 150px);
+	min-height: calc(100vh - 210px);
 	padding-bottom: 0;
 }
 

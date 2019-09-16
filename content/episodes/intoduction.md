@@ -84,44 +84,36 @@ Tim: Yeah, that's it. I mean, so many, so often you see something and it's a fin
 	  	who: 'tim',
 	  	text: "All right and together we make the fantastic team of Tim and Ruth... "
 	  },
-
 	  { 
 	  	time: 44,
 	  	who: 'ruth',
 	  	text: "We'll be talking about what generative artist is, what creative coding is and a little bit of the history, the tools and lots more..."
 	  },
-
 	  {
 	  	time: 79,
 	  	who: 'tim',
 	  	text: "There's so much kind of to explore in the generative and creative coding space that isn't in blog form..."
 	  },
-
 	  { 
 	  	time: 143,
 	  	who: 'ruth',
 	  	text: "I've also been asked a lot about how I got into this position. Its a big question, and difficult to answer..."
 	  },
-
 	  {
 	  	time: 197,
 	  	who: 'tim',
 	  	text: "Lets talk about Tim... <br><br> Relavent links: <br> - <a href='http://tholman.com' target='_blank'>Personal Website</a> <br> - <a href='https://twitter.com/twholman' target='_blank'>Twitter</a>"	
 	  },
-
 	  {
 	  	time: 309,
 	  	who: 'ruth',
 	  	text: "And Ruth! <br><br> Relavent links: <br> - <a href='https://ruthjohn.com/' target='_blank'>Personal Website</a> <br> - <a href='https://twitter.com/Rumyra' target='_blank'>Twitter</a>"	
 	  },
-
 	  {
 	  	time: 420,
 	  	who: 'speaker',
 	  	text: "And closing out! <br><br> Relavent links: <br> - <a href='http://generativeartistry.com' target='_blank'>This site</a>"	
 	  }
-
-
   ]
 </script>
 
