@@ -25,9 +25,9 @@ Ruth and Tim get to talking about what they want to get out of this podcast, whe
 
 **Tim:** All right and together we make the fantastic team of Tim and Ruth. This is if you're listening, the new flashy podcasts where we're going to talk about generative art, creative code, kind of everything in that realm of coding and creativity. Get a little nerdy here and there.
 
-**Ruth:** We'll be talking about what generative artist is, what creative crediting is and a little bit of the history. Quite a lot of the tools that we use to do both of these things. Quite a lot of, a lot of the theory. So we'll be talking a lot about that. We have some guests; we have some amazing guests for you. So look forward to that. We're going to be talking to people who actually do this, how they do this, why they do this, some things that they've actually done. We are going to be talking about just some random stuff that we like talking about, right, Tim?
+**Ruth:** We'll be talking about what generative artist is, what creative coding is and a little bit of the history. Quite a lot of the tools that we use to do both of these things. Quite a lot of, a lot of the theory. So we'll be talking a lot about that. We have some guests; we have some amazing guests for you. So look forward to that. We're going to be talking to people who actually do this, how they do this, why they do this, some things that they've actually done. We are going to be talking about just some random stuff that we like talking about, right, Tim?
 
-**Tim:** Yeah, I think that's it. I think you can't, you can't have a podcast without random, you can't have generative art without random you can't exactly math out random. That's it. Yeah, I’m super excited. I'm super excited. We've got so many good guests coming up as well. We have, I don't know, there's just so much to say, I think, and there's so much kind of to explore in the generative and creative coding space that isn't. Yeah. And I think, you know a podcast is such a good format for that because you can kind of consume it on the go. But what's more, I think so much is kind of goes missing in blog posts about creative code or when you're, you know, looking at code you don't really get the full story of like who, what, why how somebody came up with their ideas, how they created what they wanted to create, what they started to do and how they ended up where they ended up.
+**Tim:** Yeah, I think that's it. I think you can't, you can't have a podcast without random, you can't have generative art without random you can't exactly math out random. That's it. Yeah, I’m super excited. I'm super excited. We've got so many good guests coming up as well. We have, I don't know, there's just so much to say, I think, and there's so much kind of to explore in the generative and creative coding space that isn't in blog form. Yeah. And I think, you know a podcast is such a good format for that because you can kind of consume it on the go. But what's more, I think so much is kind of goes missing in blog posts about creative code or when you're, you know, looking at code you don't really get the full story of like who, what, why how somebody came up with their ideas, how they created what they wanted to create, what they started to do and how they ended up where they ended up.
 
 **Ruth:** Yeah, absolutely. Yeah. Because I think a question, I get asked a lot is, how do you start doing this? How did you start doing this? What is this? Was the other question. And I think this is really the answer to all of that. Because you can teach people how to do it. You can teach people to code how to do it, but you can't go into that backstory.
 Tim: Yeah, that's it. I mean, so many, so often you see something and it's a finished product and you kind of, you almost assume that they had that idea and then they made it, you know? But I guess the reality is that it was kind of a journey. It's always a journey along the way. That's kind of what we want to explore.
@@ -68,7 +68,7 @@ Tim: Yeah, that's it. I mean, so many, so often you see something and it's a fin
     time: 0,
     who: 'speaker',
     text:
-	      "Welcome to the podcast! This text will update with info, icites, media and links along with the transcription!"
+	      "Welcome to the podcast! This text will update with info, incites, media and links along with the transcription!"
 	  },
 	  { 
 	  	time: 17, 
@@ -79,9 +79,49 @@ Tim: Yeah, that's it. I mean, so many, so often you see something and it's a fin
 	    who: 'ruth',
 	    text: "I am Ruth. </br></br> <img src='https://pbs.twimg.com/profile_images/820304800478658562/V20lAtva_400x400.jpg' />"
 	  },
-	  {},
-	  {},
-	  {}
+	  {
+	  	time: 24,
+	  	who: 'tim',
+	  	text: "All right and together we make the fantastic team of Tim and Ruth... "
+	  },
+
+	  { 
+	  	time: 44,
+	  	who: 'ruth',
+	  	text: "We'll be talking about what generative artist is, what creative coding is and a little bit of the history, the tools and lots more..."
+	  },
+
+	  {
+	  	time: 79,
+	  	who: 'tim',
+	  	text: "There's so much kind of to explore in the generative and creative coding space that isn't in blog form..."
+	  },
+
+	  { 
+	  	time: 143,
+	  	who: 'ruth',
+	  	text: "I've also been asked a lot about how I got into this position. Its a big question, and difficult to answer..."
+	  },
+
+	  {
+	  	time: 197,
+	  	who: 'tim',
+	  	text: "Lets talk about Tim... <br><br> Relavent links: <br> - <a href='http://tholman.com' target='_blank'>Personal Website</a> <br> - <a href='https://twitter.com/twholman' target='_blank'>Twitter</a>"	
+	  },
+
+	  {
+	  	time: 309,
+	  	who: 'ruth',
+	  	text: "And Ruth! <br><br> Relavent links: <br> - <a href='https://ruthjohn.com/' target='_blank'>Personal Website</a> <br> - <a href='https://twitter.com/Rumyra' target='_blank'>Twitter</a>"	
+	  },
+
+	  {
+	  	time: 420,
+	  	who: 'speaker',
+	  	text: "And closing out! <br><br> Relavent links: <br> - <a href='http://generativeartistry.com' target='_blank'>This site</a>"	
+	  }
+
+
   ]
 </script>
 
