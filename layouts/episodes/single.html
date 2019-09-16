@@ -15,9 +15,31 @@
 
     {{ partial "header.html" . }}
 
-    <div class="episode-content">
-      {{ .Content }}
+    <div class="tutorial-post">
+      
+      <div class="sidebar audio-sidebar">
+
+				
+        <audio src="{{ .Params.mp3 }}" controls></audio>
+
+      	<div class="interactive-option">	
+	        <input type="checkbox" id="interactive" name="interactive"
+	       checked>
+					<label for="interactive">Play with annotations and media attached to podcast.</label>
+				</div>
+
+      </div>
+
+      <div class="tutorial-content episode-content">
+      	<div class="tutorial-content-wrapper">
+        	{{ .Content }}
+      	</div>
+      </div>
     </div>
+
+    {{ partial "footer.html" . }}
+
+    <script src="/js/transcription-markdown.js"></script>
 
     {{ partial "tracking.html" . }}
   </body>
