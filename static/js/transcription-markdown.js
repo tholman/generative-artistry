@@ -6,12 +6,12 @@
 	var interactiveMode = true
 	var currentTime = 0
 	var active = false
+	var currentActiveTime = null
 
 	var interactiveCheckbox = document.querySelector('#interactive');
 	var audioElement = document.querySelector('audio')
 	var tutorialContentParent = document.querySelector('.tutorial-content')
 	var tutorialContent = document.querySelector('.tutorial-content-wrapper')
-	var current = null
 
 	// Checkbox can be turned off
 	interactiveCheckbox.addEventListener('click', (e) => {
@@ -21,51 +21,43 @@
 	// Audio element reports its own updates
 	audioElement.addEventListener('timeupdate', (e) => {
 		currentTime = audioElement.currentTime
-
-		if( active === false && interactiveMode === true ) {
-			active = true;
-			replaceCurrent()
-		}
-
-		checkUpdate()
+		if( interactiveMode ) checkUpdate()
 	})
+
+
+	const nodeData = []
+	function getAndPrepTimes() {
+		const nodes = document.querySelectorAll('[data-time]')
+		nodes.forEach(node => {
+			const times = node.getAttribute('data-time').split(':')
+			const totalSeconds = parseInt(times[0]) * 60 + parseInt(times[1])
+			nodeData.push({
+				time: totalSeconds,
+				domNode: node
+			})
+		})
+	}
+
 
 	function checkUpdate() {
 
-
-	  //  Can obv be less messy
-	  const passedTimes = timingData.filter(item => {
+	  const passedTimes = nodeData.filter(item => {
 	    return item.time < currentTime;
 	  });
 
 	  const currentItem = passedTimes[passedTimes.length - 1];
 
-
-	  if (inner.innerHTML !== currentItem.text) {
-	    inner.innerHTML = currentItem.text;
-	    inner.className = 'who ' + currentItem.who
+	  if( currentActiveTime !== currentItem.time && interactiveMode ) {
+	  	currentActiveTime = currentItem.time
+	  	currentItem.domNode.scrollIntoView({behavior: 'smooth'})
 	  }
 
+	  console.log(currentItem)
+
 	}
 
 
-	var inner
-	var newCurrent
 
-	function replaceCurrent() {
-		tutorialContentParent.removeChild(tutorialContent)
-
-		newCurrent = document.createElement('div')
-		newCurrent.className = 'rich-content'
-
-		inner = document.createElement('div')
-		inner.className = 'who'
-
-		newCurrent.appendChild(inner)
-
-		tutorialContentParent.appendChild(newCurrent)
-	}
-
-
+	getAndPrepTimes();
 
 })()

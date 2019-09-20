@@ -32,8 +32,12 @@ code {
  */
 
 .episode-content {
-  max-width: 500px;
+  max-width: 600px;
   padding: 20px;
+}
+
+[data-time] {
+  padding-top: 30px;
 }
 
 /**
