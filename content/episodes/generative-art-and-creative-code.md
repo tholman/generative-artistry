@@ -5,7 +5,7 @@ image = "/img/episode.png"
 iama = "episode"
 teaser = "Lets start talking about generative art, creative code, and the world around it"
 author = "Ruth John & Tim Holman"
-mp3 = "/mp3/1-episode-1.mp3"
+mp3 = "/mp3/1-generative-and-creative-art.mp3"
 number = "00"
 +++
 
@@ -17,7 +17,7 @@ Tim and Ruth jump right into creative code and generative art, this episode we t
 
 --
 
-<span data-time="00:00">
+<span data-time="00:20">
 Welcome to the first ever episode of Generative Art podcast with your hosts, Tim and Ruth. We're going to kick off with a general overview of generative art, creative coding, and digital art. So sit back, relax and enjoy our first episode.
  </span>
 
@@ -107,15 +107,19 @@ Welcome to the first ever episode of Generative Art podcast with your hosts, Tim
 </span>
 
 <span data-time="08:54">
-**Ruth:** Yeah, exactly. We don't have this physical form. This is something that I actually asked from my friend, she just started to be an art producer and I was like, how do digital artists sell their pieces in galleries because, or like, you know, make money, right? How do you sell that thing? They don't sell their piece. They make their money by putting it into galleries in a certain amount of time. So the galleries give them money to display it over and over and over again. That's how the new model has been formed, which is only been over the past couple of, like I say, sort of five years. So it's taken a long time for that new model to be formed because actually if we look at something like the history of something like computer art specifically, which is really the coding and being creative for coding, I mean that's been around since the 60s.  I've got some history stuff here. New tendencies exhibitions. So this is the first exhibitions that, this was the first series of exhibitions that brought computers or coding specifically into the art forms that they were displaying. They had a series of five exhibitions, new tendencies, and all the big art galleries around the world. It was the fourth exhibition that was actually called computer and visual research in 1968. There's a collective from the Netherlands compost 68, 1968 to 1969 they're formed. [10:28 inaudible], go Jerian Clausman, pretty sure I pronounced that right. And Arthur Bean, they were collective from the Netherlands that brought about some of the first digital art, which wasn't necessarily produced on a computer, but it was just by a computer. So they would create the algorithms for the computer and then sort of paint them.
-</span>
+**Ruth:** Yeah, exactly. We don't have this physical form. This is something that I actually asked from my friend, she just started to be an art producer and I was like, how do digital artists sell their pieces in galleries because, or like, you know, make money, right? How do you sell that thing? They don't sell their piece. They make their money by putting it into galleries in a certain amount of time. So the galleries give them money to display it over and over and over again. That's how the new model has been formed, which is only been over the past couple of, like I say, sort of five years. So it's taken a long time for that new model to be formed because actually if we look at something like the history of something like computer art specifically, which is really the coding and being creative for coding, I mean that's been around since the 60s.  
+
+I've got some history stuff here. New tendencies exhibitions. So this is the first exhibitions that, this was the first series of exhibitions that brought computers or coding specifically into the art forms that they were displaying. They had a series of five exhibitions, new tendencies, and all the big art galleries around the world. It was the fourth exhibition that was actually called computer and visual research in 1968. There's a collective from the Netherlands compos 68, 1968 to 1969 they're formed. Jan Baptist Bedaux, Jerian Clausman, pretty sure I pronounced that right. And Arthur Bean, they were collective from the Netherlands that brought about some of the first digital art, which wasn't necessarily produced on a computer, but it was just by a computer. So they would create the algorithms for the computer and then sort of paint them.
+
+- [The compos 68 show](https://monoskop.org/Compos_68)
+  </span>
 
 <span data-time="10:48">
 **Tim:** Are we in the punch card era here?
 </span>
 
 <span data-time="10:51">
-**Ruth:**   Yeah, we are 1968, yeah, we would have been, well would we have been? Hang on, I'm saying that because the work my dad does, he was, he would've been, yeah, he was still working on punch cards in 1975, so I would've [11:03 inaudible] and that's a big assumption. We'd have to check that out. So yeah, they were, they did some stuff with process we should talk about in the tooling episode, but apart from the process that they did, they would sort of generate stuff and then paint it. So this is still really, really new stuff. But considering we've been making art with codes in 1968 and we're only now beginning to build a model around actually creating money as artists who selling it, because a lot of the creative....
+**Ruth:**   Yeah, we are 1968, yeah, we would have been, well would we have been? Hang on, I'm saying that because the work my dad does, he was, he would've been, yeah, he was still working on punch cards in 1975, so It would've been then and that's a big assumption. We'd have to check that out. So yeah, they were, they did some stuff with process we should talk about in the tooling episode, but apart from the process that they did, they would sort of generate stuff and then paint it. So this is still really, really new stuff. But considering we've been making art with codes in 1968 and we're only now beginning to build a model around actually creating money as artists who selling it, because a lot of the creative....
 </span>
 
 <span data-time="11:34">
@@ -127,7 +131,9 @@ Welcome to the first ever episode of Generative Art podcast with your hosts, Tim
 </span>
 
 <span data-time="12:05">
-**Tim:** That's very much my case. You know, it's like, oh, I’ve got, yeah, I’ve got these skills that I use, you know in my day to day basis. But they, yeah, they can be used for other things. I think like in general computers, this interesting case where like when we learn to read, we also kind of learned to write at the same time. And we've kind of got so many people now coming up with phones and computers who are able to consume for this device. And as time goes on, I feel like it is going to become like a mandatory school thing to be like, oh, you need to be able to create on these devices as well. So it's so cool, like looking at the big long kind of history of generative art and Computer Art. It's like as soon as there were computers, there were some people that were like, let's create art on these things. You know, let's, even that example that you use where they use the computers to generate it and then they would paint it. It's still, it's still like, yeah, the second that it exists, somebody is going to try and get creative with that technology, which I love.
+**Tim:** That's very much my case. You know, it's like, oh, I’ve got, yeah, I’ve got these skills that I use, you know in my day to day basis. But they, yeah, they can be used for other things. I think like in general computers, this interesting case where like when we learn to read, we also kind of learned to write at the same time. And we've kind of got so many people now coming up with phones and computers who are able to consume for this device. And as time goes on, I feel like it is going to become like a mandatory school thing to be like, oh, you need to be able to create on these devices as well.
+
+So it's so cool, like looking at the big long kind of history of generative art and Computer Art. It's like as soon as there were computers, there were some people that were like, let's create art on these things. You know, let's, even that example that you use where they use the computers to generate it and then they would paint it. It's still, it's still like, yeah, the second that it exists, somebody is going to try and get creative with that technology, which I love.
 </span>
 
 <span data-time="13:29">
@@ -135,7 +141,9 @@ Welcome to the first ever episode of Generative Art podcast with your hosts, Tim
 </span>
 
 <span data-time="13:50">
-**Tim:**  Yeah, I mean, yeah, I mean it just kind of goes back, it just goes back forever. The example that I like to use is the, I think it's Mozart would write individual lines of you know, musical piece, different bars and then kind of roll some dice to put them together in a different way. I feel like that is such a nice good example of like early generative art with audio, with music. It's like, let the dice decide how the composition is arranged. But yeah, I’ve spent a lot of time, I think when you play around with a pen plotter you immediately kind of dig back to the first, the first pieces of generative art where they're using, it's like, what are those vector display kind of, you know, what am I trying to talk about here? Like before you had a screen, you had the one that's like the little laser on it, like the old video games.
+**Tim:**  Yeah, I mean, yeah, I mean it just kind of goes back, it just goes back forever. The example that I like to use is the, I think it's Mozart would write individual lines of you know, musical piece, different bars and then kind of roll some dice to put them together in a different way. I feel like that is such a nice good example of like early generative art with audio, with music. It's like, let the dice decide how the composition is arranged.
+
+But yeah, I’ve spent a lot of time, I think when you play around with a pen plotter you immediately kind of dig back to the first, the first pieces of generative art where they're using, it's like, what are those vector display kind of, you know, what am I trying to talk about here? Like before you had a screen, you had the one that's like the little laser on it, like the old video games.
 </span>
 
 <span data-time="14:59">
@@ -144,19 +152,18 @@ The one that just had the little light drawing on it Right.
 </span>
 
 <span data-time="15:09">
-**Tim:**  Yeah. Yeah, yeah. I feel like even in school we kind of messed around with those and you change all the different frequencies and you'd create these kinds of yes, yes, exactly, pieces like that. And then there's so many really cool artists we'll link to a bunch of their works here, but Viera Mona, she is still actually producing generative and like art with computers. But she was doing that like all through the kind of sixties, Seventies. And I’ve kind of gone out of my way to recreate a bunch of those, a bunch of those individual pieces. I think like when you have like, it's funny that you brought up the mathematicians, when you're playing around with like particular algorithms and particular ways to do things. And you  want to represent that on a piece of paper or on a screen, its kind of intrinsically ends up looking very artistic to me. You know, if you, if you pick something like an algorithm to pack as many circles as you want onto a page. And they have to be random sizes. You know, it ends up kind of creating like a molecular kind of cell.
+**Tim:**  Yeah. Yeah, yeah. I feel like even in school we kind of messed around with those and you change all the different frequencies and you'd create these kinds of yes, yes, exactly, pieces like that. And then there's so many really cool artists we'll link to a bunch of their works here, but Viera Mona, she is still actually producing generative and like art with computers. But she was doing that like all through the kind of sixties, Seventies. And I’ve kind of gone out of my way to recreate a bunch of those, a bunch of those individual pieces.
 
-- TODO: link monlar
-- TODO: Link a pic of her art
-
+I think like when you have like, it's funny that you brought up the mathematicians, when you're playing around with like particular algorithms and particular ways to do things. And you  want to represent that on a piece of paper or on a screen, its kind of intrinsically ends up looking very artistic to me. You know, if you, if you pick something like an algorithm to pack as many circles as you want onto a page. And they have to be random sizes. You know, it ends up kind of creating like a molecular kind of cell.
 </span>
 
-- TODO: Clarify all this
-- TODO: Link here
-
 <span data-time="16:33">
-**Ruth:** Without going too far into algorithms, because we were talking, I'm pretty sure we're talking about older than that. There's an artist Bridget Riley, she was very active, started in sixties, still working now. She does huge, big I say paintings and say plaques and she start to shape and then she modifies it to the next shape, just a little bit and modifies it to the next thing just a little bit. And so she ends up with what is this square that Everett? So just ever so slightly moves over time but on this massive painting. And to me that's, that is still generative without the actuality. I think it's still [17:21 inaudible]  just slightly move, slightly rotates the next time she does the [17:26 inaudible] And they're huge and they're Vegan. She doesn't use a computer. It's just as far as I'm aware anyway, it's just how she's, she figures out how draw it. I've got a good one for you, you know this. Cause we have been actually spoken about this before. I read about this the other day. I was actually, I was doing some research on [17:54 inaudible] an idea of audio visualizations. So I was looking at like the history of that. There is a guy called Thomas Wilfred in the 1920s. He actually created an instrument called the [18:13 inaudible].  He called it a [18:18 inaudible]. Basically what he did was he stringed up a keyboard, not like a laptop keyboard. We don't have them in the 1920s, like an actual sort of organ-based keyboard, but he strung it up with gels. So his gels specifically, we didn't have like gels as far as visual artists to concerned is. So if you imagine all projectors, used to have at school, used to have like light projectors where you put a piece of film on the base and it would project up from mirror and project from the wall. Gels were like two things together and you could put like liquid in the middle and you can move them around or like gels over lights. It just colored film that you put over lights. They were gels. His gels were the bottom jam jars which he had painted in different colors. So he'd strung up what he called gels, bottoms are jam jars on different strings with the insides of sewing machines to control them.
-[19:32 inaudible]. He basically like shining lights through these gels and when he plays the keyboard, when he plays this organ and lights to move. So the lights turn on, the gels move, and he is basically one of the first visual artists, like one of the first DJs. And to me that's one of the first generative artists as well. And he did like a whole show. We are going to do a whole chat on this properly. He did a whole show. There's no music. Just in, I think it was in London just in a theater in London and the whole audience was just absolutely amazed. After that, that's when he started putting these lights to music. Yeah. It's not just about computers, but that is like an early form of computer If you think about it, you're pressing buttons and things are moving.
+**Ruth:** Without going too far into algorithms, because we were talking, I'm pretty sure we're talking about older than that. There's an artist Bridget Riley, she was very active, started in sixties, still working now. She does huge, big I say paintings and say plaques and she start to shape and then she modifies it to the next shape, just a little bit and modifies it to the next thing just a little bit. And so she ends up with what is this square that Everett? So just ever so slightly moves over time but on this massive painting. And to me that's, that is still generative without the actuality. I think it's still, yeah like a little circle or oval that just slightly moves, slightly rotates the next time she does the oval it slightly rotates, and so on and so forth.
+She doesn't use a computer. It's just as far as I'm aware anyway, it's just how she's, she figures out how draw it.
+
+I've got a good one for you, you know this. Cause we have been actually spoken about this before. I read about this the other day. I was actually, I was doing some research on, I was writing a new talk and I do a lot of audio visualizations. So I was looking at like the history of that. There is a guy called Thomas Wilfred in the 1920s. He actually created an instrument called the Clabalax. He called it a Clabalax. Basically what he did was he stringed up a keyboard, not like a laptop keyboard. We don't have them in the 1920s, like an actual sort of organ-based keyboard, but he strung it up with gels. So his gels specifically, we didn't have like gels as far as visual artists to concerned is. So if you imagine all projectors, used to have at school, used to have like light projectors where you put a piece of film on the base and it would project up from mirror and project from the wall. Gels were like two things together and you could put like liquid in the middle and you can move them around or like gels over lights. It just colored film that you put over lights. They were gels. His gels were the bottom jam jars which he had painted in different colors. So he'd strung up what he called gels, bottoms are jam jars on different strings with the insides of sewing machines to control them.
+
+He's basically like shining lights through these gels and when he plays the keyboard, when he plays this organ and lights to move. So the lights turn on, the gels move, and he is basically one of the first visual artists, like one of the first DJs. And to me that's one of the first generative artists as well. And he did like a whole show. We are going to do a whole chat on this properly. He did a whole show. There's no music. Just in, I think it was in London just in a theater in London and the whole audience was just absolutely amazed. After that, that's when he started putting these lights to music. Yeah. It's not just about computers, but that is like an early form of computer If you think about it, you're pressing buttons and things are moving.
 </span>
 
 <span data-time="20:33">
@@ -167,13 +174,14 @@ The one that just had the little light drawing on it Right.
 **Ruth:** That’s what I am saying, an overhead projector. Thank you very much. Got the name.
 </span>
 
-- TODO: Link
-  <span data-time="21:14">
-  **Tim:**  And he had a small spinning basically bowl that he was just pouring oils on over time and so they were mixing together, and it just was absolutely stunning. I was like, Oh, you know, he's using real life to make these kinds of crazy art works.  I'll put a link to the Instagram.
-  </span>
+<span data-time="21:14">
+**Tim:**  And he had a small spinning basically bowl that he was just pouring oils on over time and so they were mixing together, and it just was absolutely stunning. I was like, Oh, you know, he's using real life to make these kinds of crazy art works.  I'll put a link to the Instagram.
+</span>
 
 <span data-time="21:39">
-**Ruth:** Yeah, yeah. We will talk about this more in depth because there's loads and loads of stuff around early VJ, my head is full of this weird knowledge. We will share. But that was my favorite, was my favorite findings of this week. Because I was like, this guys just got this machine that VJ's.  It's just basically a piano that controlled lights going through the end of Jam jars, which is exactly what you were just describing, which is like a modern day version, which is, only the head projector is somebody point out [22:16 inaudible] I really love your little comment about, you can’t see anything, but you could build [22:23 inaudible].  When you figure it out, you're satisfied. Oh yeah, I see what they've done there. They've done this and they've done that. I'm good.
+**Ruth:** Yeah, yeah. We will talk about this more in depth because there's loads and loads of stuff around early VJ, my head is full of this weird knowledge. We will share. But that was my favorite, was my favorite findings of this week. Because I was like, this guys just got this machine that VJ's.  It's just basically a piano that controlled lights going through the end of Jam jars, which is exactly what you were just describing, which is like a modern day version, which is, only the head projector is somebody point out of it.
+
+I really love your little comment about, you can’t see anything, but you could build it. When you figure it out, you're satisfied. Oh yeah, I see what they've done there. They've done this and they've done that. I'm good.
 </span>
 
 <span data-time="22:34">
@@ -213,7 +221,9 @@ The one that just had the little light drawing on it Right.
 </span>
 
 <span data-time="24:48">
-**Ruth:** The classic quote about what is creative is that it's expressive and not functional. You are creating something purely just to express yourself rather than building something for purpose. So for the most part, as developers if we are going into our jobs as say web developers classically like I didn't necessarily do that so much anymore but know if I wanted to take a job as a web developer, I could, I would be building something for a purpose. I've been building websites to publish your content. It's not particularly expressive. Whereas if I wanted to build something creatively, [25:26 inaudible] hey, I’ve got this weird I did to make it do something that you say. I just built emotive piano, so I want to play a piano and I want emojis to come out of that every single time I, hit a key I what to show an emoji. There's no functionality behind that. It's merely expressive.
+**Ruth:** The classic quote about what is creative is that it's expressive and not functional. You are creating something purely just to express yourself rather than building something for purpose. So for the most part, as developers if we are going into our jobs as say web developers classically like I didn't necessarily do that so much anymore but know if I wanted to take a job as a web developer, I could, I would be building something for a purpose. I've been building websites to publish your content.
+
+It's not particularly expressive. Whereas if I wanted to build something creatively, I'm just like hey, I’ve got this weird I did to make it do something that you say. I just built emotive piano, so I want to play a piano and I want emojis to come out of that every single time I, hit a key I what to show an emoji. There's no functionality behind that. It's merely expressive.
 </span>
 
 <span data-time="25:45">
@@ -221,7 +231,9 @@ The one that just had the little light drawing on it Right.
 </span>
 
 <span data-time="25:49">
-**Ruth:** That’s the idea how on board with this idea I personally am is in question. Do a little chat on that if you want, because I think let's not talk about it now, but that's the idea about creative coding. It’s also a little bit around digital art and what makes something digital art rather than just art, which is the idea that it has code behind it. Dominic MacGyver Lopes has written a whole book on philosophy of computer art, which sort of talks about this is the role of coding in art and using code as a tool to create art, which is essentially what we're doing. If we're talking like us to specifically as coders who create things are going to do. But people have disagreed with that as well. These are all just opinions and you're entitled to my opinion. People have their own Toby Judith and Travis Cox both big in the creative space. They look to expose the code as part of the creativity. I actually was discussing this, not for this purpose by the way, but a completely different purpose cause I wanted to talk about this, not on the podcast we talk that I was doing. Just in which one's right. Like are we creating these things that we're making for the end results or for the actual creative process at this meetup that was at this week. Two people are sitting there just went both, they didn't even waiver, they didn't even think about it. They just went both. It's the process and it's the final piece.  So as far as creative coding goes, cause I'm the same. I'm just like, yeah, you're creating a piece with your idea and this whole thing behind the idea and the journey that's taken you to this idea. But your tool, your choice of what is making this idea becomes part of who you are. We could've been painters, we could've been sculptors, we could've been textile artists, we could've been any number of things. Creativity's always been there, but we chose code for a reason. That's because of that's who we are as part of our journey.
+**Ruth:** That’s the idea how on board with this idea I personally am is in question. Do a little chat on that if you want, because I think let's not talk about it now, but that's the idea about creative coding. It’s also a little bit around digital art and what makes something digital art rather than just art, which is the idea that it has code behind it. Dominic MacGyver Lopes has written a whole book on philosophy of computer art, which sort of talks about this is the role of coding in art and using code as a tool to create art, which is essentially what we're doing. If we're talking like us to specifically as coders who create things are going to do. But people have disagreed with that as well. These are all just opinions and you're entitled to my opinion. People have their own Toby Judith and Travis Cox both big in the creative space. They look to expose the code as part of the creativity. I actually was discussing this, not for this purpose by the way, but a completely different purpose cause I wanted to talk about this, not on the podcast we talk that I was doing. Just in which one's right.
+
+Like are we creating these things that we're making for the end results or for the actual creative process at this meetup that was at this week. Two people are sitting there just went both, they didn't even waiver, they didn't even think about it. They just went both. It's the process and it's the final piece.  So as far as creative coding goes, cause I'm the same. I'm just like, yeah, you're creating a piece with your idea and this whole thing behind the idea and the journey that's taken you to this idea. But your tool, your choice of what is making this idea becomes part of who you are. We could've been painters, we could've been sculptors, we could've been textile artists, we could've been any number of things. Creativity's always been there, but we chose code for a reason. That's because of that's who we are as part of our journey.
 </span>
 
 <span data-time="28:13">
@@ -243,7 +255,7 @@ The one that just had the little light drawing on it Right.
 **Tim:** Right.
 
 <span data-time="30:15">
-**Ruth:** Gotcha. Okay. I see how these layers work. I see how putting oil on top of Goulash works. I see how Goulash on top of oil works. I see how acrylic on top of Goulash and so on and so forth until I actually got to the point [30:27 inaudible] now I know I want to paint red. I know how all of these things work on top of each other. Let's paint red.
+**Ruth:** Gotcha. Okay. I see how these layers work. I see how putting oil on top of Goulash works. I see how Goulash on top of oil works. I see how acrylic on top of Goulash and so on and so forth until I actually got to the point where he was like: "Now I know I want to paint red."" I know how all of these things work on top of each other. Let's paint red.
 </span>
 
 <span data-time="30:36">
@@ -274,10 +286,9 @@ The one that just had the little light drawing on it Right.
 **Tim:** Anyhow, I kind feel like that the....
 </span>
 
-- TODO: these names?
-  <span data-time="31:45">
-   **Ruth:** I think that's what Toby, Judith and Travis Cox is thought of etching on is exposing the code and that's because that’s part of the process, as part of the art.
-  </span>
+ <span data-time="31:45">
+ **Ruth:** I think that's what Toby, Judith and Travis Cox is thought of etching on is exposing the code and that's because that’s part of the process, as part of the art.
+</span>
 
 <span data-time="31:57">
 **Tim:** That's good. I like art galleries, or the Smithsonian as has taken maybe Pac man or something like that as the code for Pac-man and kind of put it up in there, in their gallery. I might be mistaken.
@@ -292,7 +303,7 @@ The one that just had the little light drawing on it Right.
 </span>
 
 <span data-time="32:48">
-**Ruth:** They do look cool. [32:49 inaudible]. Like I can live without it.  I'm going to write code, [32:59 inaudible] I'm like...
+**Ruth:** They do look cool.  Like I can live without it. I'm going to write code.
 </span>
 
 <span data-time="33:03">
@@ -307,7 +318,8 @@ The one that just had the little light drawing on it Right.
 **Tim:** I'm excited as well. Should we call it a kachow?
 </span>
 
-- TODO: Links
-  <span data-time="33:51">
-  Thanks for listening to the first episode of the Generative Art Podcast. You can find all the links and the transcript www.generativeartestry.com. We also have a Twitter account, @generativeartpodcast, so you can follow us on that. We'd also like to give a big shout out to the musician in charge of our intro and outro music, Matt McKay. You can find him under destroy with science on SoundCloud and Bandcamp. So If you enjoy it, that's where you can find hit. Keep subscribed because we've got loads more content for you and we shall see you next week.
+<span data-time="33:51">
+Thanks for listening to the first episode of the Generative Art Podcast. You can find all the links and the transcript www.generativeartestry.com. We also have a Twitter account, @genartpodcast, so you can follow us on that. We'd also like to give a big shout out to the musician in charge of our intro and outro music, Matt McKay. You can find him under destroy with science on SoundCloud and Bandcamp. So If you enjoy it, that's where you can find hit. Keep subscribed because we've got loads more content for you and we shall see you next week.
+
+- [Our Twitter Account](https://twitter.com/GenArtPodcast)
   </span>

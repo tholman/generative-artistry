@@ -18,11 +18,15 @@ _**If you hit play on the left, with the transcription, and media checkbox ticke
 --
 
 <span data-time="00:18">
-**Tim:** Hey everybody, welcome to the generative art podcast. I am Tim and... 
+**Tim:** Hey everybody, welcome to the generative art podcast. I am Tim and...
+
+<img src="https://pbs.twimg.com/profile_images/851553731149778946/VDKWjp2V_400x400.jpg" />
 </span>
 
 <span data-time="00:23">
 **Ruth:** I am Ruth.
+
+<img src="https://pbs.twimg.com/profile_images/820304800478658562/V20lAtva_400x400.jpg" />
 </span>
 
 <span data-time="00:24">
