@@ -15,7 +15,6 @@
 	// Checkbox can be turned off
 	interactiveCheckbox.addEventListener("click", e => {
 		interactiveMode = e.target.checked;
-		console.log(interactiveMode);
 	});
 
 	// Audio element reports its own updates
@@ -52,8 +51,6 @@
 			currentActiveTime = currentItem.time;
 			currentItem.domNode.scrollIntoView({ behavior: "smooth" });
 		}
-
-		console.log(currentItem);
 	}
 
 	getAndPrepTimes();
