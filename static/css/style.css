@@ -7,7 +7,7 @@
 }
 
 body {
-  font-family: 'Roboto Mono', monospace;
+  font-family: "Roboto Mono", monospace;
   -webkit-font-smoothing: antialiased;
   background: #fff;
   padding: 0px;
@@ -27,6 +27,19 @@ code {
   font-weight: bold;
 }
 
+.options {
+  font-size: 14px;
+}
+
+.options ul {
+  padding-left: 30px;
+}
+
+.options a {
+  color: blue;
+  margin-bottom: 4px;
+}
+
 /**
  * Episodes
  */
@@ -44,7 +57,8 @@ code {
  * Header & Footer
  */
 
-header, footer {
+header,
+footer {
   font-weight: bold;
   font-size: 18px;
   padding: 40px;
@@ -56,13 +70,15 @@ header, footer {
   background: #fafafa;
 }
 
-header .wrapper, footer .wrapper {
+header .wrapper,
+footer .wrapper {
   justify-content: space-between;
   flex-direction: row;
   display: flex;
 }
 
-header a, footer a {
+header a,
+footer a {
   color: #222;
   text-decoration: none;
 }
@@ -81,8 +97,6 @@ footer .coffee {
   line-height: 24px;
   font-size: 28px;
 }
-
-
 
 /**
  * Home
@@ -104,7 +118,7 @@ article:nth-child(even) {
 
 /*Footer if there is an even number of posts*/
 article:nth-child(odd) + footer {
-    background: #fafafa;
+  background: #fafafa;
 }
 
 .article-number {
@@ -181,7 +195,7 @@ article:nth-child(odd) + footer {
 }
 
 .tutorial-sidebar {
-	justify-content: center;
+  justify-content: center;
   align-items: flex-end;
 }
 
@@ -233,7 +247,7 @@ article:nth-child(odd) + footer {
   width: 30px;
   height: 30px;
   font-size: 25px;
-  transform: scaleX(-1.0);
+  transform: scaleX(-1);
   margin-right: -35px;
   cursor: pointer;
 }
@@ -264,15 +278,15 @@ form input {
   border: none;
   color: blue;
   font-size: 15px;
-  font-family: inherit; 
+  font-family: inherit;
   padding: 0;
   cursor: pointer;
   text-decoration: underline;
 }
 
 .episode-content {
-	min-height: calc(100vh - 210px);
-	padding-bottom: 0;
+  min-height: calc(100vh - 210px);
+  padding-bottom: 0;
 }
 
 /**
@@ -280,19 +294,19 @@ form input {
  */
 
 audio {
-	width: 100%;
+  width: 100%;
   margin-top: 35px;
   min-width: 250px;
 }
 
 .audio-sidebar {
-	height: calc(100vh - 210px);
-	padding-left: 10px;
-	display: block;
+  height: calc(100vh - 210px);
+  padding-left: 10px;
+  display: block;
 }
 
 details {
-	font-size: 14px;
+  font-size: 14px;
 }
 
 details .content {
@@ -302,15 +316,15 @@ details .content {
 }
 
 .summary {
-	font-size: 14px;
+  font-size: 14px;
 }
 
 .interactive-option {
-	margin-top: 15px;
+  margin-top: 15px;
   font-size: 14px;
   color: #333;
   font-style: italic;
-  padding: 0 8px
+  padding: 0 8px;
 }
 
 .rich-content {
@@ -322,7 +336,7 @@ details .content {
 }
 
 .who:before {
-  content: '';
+  content: "";
   width: 45px;
   height: 45px;
   background: red;
@@ -335,22 +349,22 @@ details .content {
 }
 
 .tim:before {
-	background: green;
+  background: green;
 }
 
 .speaker:before {
-	background: orange;
+  background: orange;
 }
 
 .ruth:before {
-	background: pink;
+  background: pink;
 }
 
 .rich-content img {
-	width: auto;
-	margin-bottom: 0;
-	max-width: 100%;
-	max-height: 200px;
+  width: auto;
+  margin-bottom: 0;
+  max-width: 100%;
+  max-height: 200px;
 }
 
 @media only screen and (max-width: 900px) {

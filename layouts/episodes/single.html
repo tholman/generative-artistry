@@ -1,39 +1,63 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
     <title>{{ .Title }} | {{ $.Site.Title }}</title>
 
-    <meta charset="utf-8">
-    
-    <meta name="description" content="{{ .Params.teaser }} {{ $.Site.Params.Description }}">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
 
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
-    <link href="/css/style.css" rel="stylesheet">
+    <meta
+      name="description"
+      content="{{ .Params.teaser }} {{ $.Site.Params.Description }}"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto+Mono"
+      rel="stylesheet"
+    />
+    <link href="/css/style.css" rel="stylesheet" />
   </head>
   <body class="episode">
-
     {{ partial "header.html" . }}
 
     <div class="tutorial-post">
-      
       <div class="sidebar audio-sidebar">
-
-				
         <audio src="{{ .Params.mp3 }}" controls></audio>
 
-      	<div class="interactive-option">	
-	        <input type="checkbox" id="interactive" name="interactive"
-	       checked>
-					<label for="interactive">Play with transcription and media attached to podcast.</label>
-				</div>
+        <div class="interactive-option">
+          <input type="checkbox" id="interactive" name="interactive" checked />
+          <label for="interactive"
+            >Play with transcription and media attached to podcast.</label
+          >
+        </div>
 
+        <div class="options">
+          <ul>
+            <li>
+              <a target="_blank" href="https://anchor.fm/s/e585c38/podcast/rss"
+                >Our Podcast RSS</a
+              >
+            </li>
+            <li>
+              <a
+                target="_blank"
+                href="https://open.spotify.com/show/0QMwExF5kPn3m9QFCFZ1sw"
+                >The Podcast on Spotify
+              </a>
+            </li>
+            <li>
+              <a target="_blank" href="https://anchor.fm/generative-art"
+                >The Podcast on Anchor
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
 
       <div class="tutorial-content episode-content">
-      	<div class="tutorial-content-wrapper">
-        	{{ .Content }}
-      	</div>
+        <div class="tutorial-content-wrapper">
+          {{ .Content }}
+        </div>
       </div>
     </div>
 
