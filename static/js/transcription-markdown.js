@@ -1,5 +1,4 @@
 // Version 0.1, lets get it working first
-// data is currently stored in a json blob.
 
 (function() {
 	var interactiveMode = true;
