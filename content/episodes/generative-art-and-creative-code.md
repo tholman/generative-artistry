@@ -1,7 +1,7 @@
 +++
 title = "Generative Art and Creative Code"
 date = 2019-09-19T09:59:00-04:00
-image = "/img/episode-1.png"
+image = "/img/episode.png"
 iama = "episode"
 teaser = "Lets start talking about generative art, creative code, and the world around it"
 author = "Ruth John & Tim Holman"
@@ -9,9 +9,11 @@ mp3 = "/mp3/1-episode-1.mp3"
 number = "00"
 +++
 
-# Introduction!
+# Generative art, creative code, and the world around us!
 
-Ruth and Tim get to talking about what they want to get out of this podcast, where we want to take it, and preaching the good word of creative code, and generative art.
+_**If you hit play on the left, with the transcription, and media checkbox ticked, this text will flow with the podcast. So you can drop back into the browser any time, and get any links or relavent text!**_
+
+Tim and Ruth jump right into creative code and generative art, this episode we talk about the what, when and why's.
 
 --
 
@@ -23,11 +25,10 @@ Welcome to the first ever episode of Generative Art podcast with your hosts, Tim
 **Tim:** Hey everybody, welcome to the generative podcast. I am Tim. 
  </span>
 
-<span data-time="00:48"> 
+<span data-time="00:48">
 **Ruth:** And I am Ruth.
 </span>
- 
- 
+
 <span data-time="00:49">
 **Tim:** All right. And today we're going to, yeah, this week we're going to talk about a lot, I feel like there's a big managerial episode almost like pay your dues kind of thing.
 </span>
@@ -125,7 +126,7 @@ Welcome to the first ever episode of Generative Art podcast with your hosts, Tim
 **Ruth:** Yeah. Well this is just, isn't it? Because you think about creative code over the past couple years has really exploded because I'm making another big assumption. A lot of people are just writing code for their day jobs because that's an industry that needs that skill as a developer. And doing it as there's, and I don't want to say hobby, but doing it in their spare time.
 </span>
 
-<span data-time="12:05"> 
+<span data-time="12:05">
 **Tim:** That's very much my case. You know, it's like, oh, I’ve got, yeah, I’ve got these skills that I use, you know in my day to day basis. But they, yeah, they can be used for other things. I think like in general computers, this interesting case where like when we learn to read, we also kind of learned to write at the same time. And we've kind of got so many people now coming up with phones and computers who are able to consume for this device. And as time goes on, I feel like it is going to become like a mandatory school thing to be like, oh, you need to be able to create on these devices as well. So it's so cool, like looking at the big long kind of history of generative art and Computer Art. It's like as soon as there were computers, there were some people that were like, let's create art on these things. You know, let's, even that example that you use where they use the computers to generate it and then they would paint it. It's still, it's still like, yeah, the second that it exists, somebody is going to try and get creative with that technology, which I love.
 </span>
 
@@ -179,7 +180,7 @@ The one that just had the little light drawing on it Right.
 **Tim:** Yeah. Yeah. I catch myself looking at artwork sometimes I'm like, what is the system behind this? What is going on?
 </span>
 
-<span data-time="22:44"> 
+<span data-time="22:44">
 **Ruth:** If I haven't figured it out, that's when I think something's really amazing and I'm going to know like how have done this.
 </span>
 
@@ -188,11 +189,11 @@ The one that just had the little light drawing on it Right.
 </span>
 
 <span data-time="24:00">
-**Ruth:**  Oh, I love that idea. Have you done anything around that?
+**Ruth:** Oh, I love that idea. Have you done anything around that?
 </span>
 
 <span data-time="24:03">
-**Tim:**   No, that's a free one. It's free one for the listeners. Yeah, absolutely. What else do we have? I feel like we're...
+**Tim:**  No, that's a free one. It's free one for the listeners. Yeah, absolutely. What else do we have? I feel like we're...
 </span>
 
 <span data-time="24:15">

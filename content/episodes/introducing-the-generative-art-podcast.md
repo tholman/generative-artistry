@@ -1,7 +1,7 @@
 +++
 title = "Introducing the Generative Art Podcast"
 date = 2019-09-15T09:59:00-04:00
-image = "/img/episode-0.png"
+image = "/img/episode.png"
 iama = "episode"
 teaser = "Ruth and Tim get to talking about what they want to get out of this podcast, where we want to take it, and preaching the good word of creative code, and generative art."
 author = "Ruth John & Tim Holman"
@@ -9,14 +9,13 @@ mp3 = "/mp3/0-intro.mp3"
 number = "00"
 +++
 
-# Introducing our Generative Art Podcast! 
+# Introducing our Generative Art Podcast!
 
 _**If you hit play on the left, with the transcription, and media checkbox ticked, this text will flow with the podcast. So you can drop back into the browser any time, and get any links or relavent text!**_
 
 **In this episode Ruth and Tim get to talking about what they want to get out of this podcast, where we want to take it, and preaching the good word of creative code, and generative art.**
 
 --
-
 
 <span data-time="00:18">
 **Tim:** Hey everybody, welcome to the generative art podcast. I am Tim and... 
@@ -82,13 +81,9 @@ Tim: Yeah, that's it. I mean, so many, so often you see something and it's a fin
 </span>
 
 <span data-time="08:00">
-**Tim:** Yeah. One like equals one love. Cool. Cool, cool, cool. Cool. 
+**Tim:** Yeah. One like equals one love. Cool. Cool, cool, cool. Cool.
 
 **Ruth:** Cool. Thanks Tim.
 
 **Tim:** Thanks Ruth.
 </span>
-
-
-
-
