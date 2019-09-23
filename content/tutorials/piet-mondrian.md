@@ -8,9 +8,9 @@ teaser = "Piet Mondrians art is world renoun, there's also something about his s
 
 # Piet Mondrian
 
-Replicating Piet Mondrians art with code is no easy task, in fact honestly I'd say there's no real way of pinning down his creations entirely with code, they were hand made. That said, we can try to replicate something within the realm of what would have been one of Piets works... so thats what we will do in this tutorial... and yes, we will add the color as well.
+Replicating [Piet Mondrian's](https://en.wikipedia.org/wiki/Piet_Mondrian) art with code is no easy task, in fact honestly I'd say there's no real way of pinning down his creations entirely with code, they were hand made. That said, we can try to replicate something within the realm of what would have been one of Piet's works... so that's what we will do in this tutorial... and yes, we will add the color as well.
 
-As usual, here is our initial setup. Using `window.devicePixelRatio` to scale the canvas on retina screens, and setting out canvas size, with only a html `<canvas>` on the page.
+As usual, here is our initial setup. Using `window.devicePixelRatio` to scale the canvas on retina screens, and setting our canvas size, with only a html `<canvas>` on the page.
 
 <div class="tmd-trigger" data-from="0">
 {{< highlight js "linenos=table,linenostart=1" >}}
@@ -19,11 +19,12 @@ var context = canvas.getContext('2d');
 
 var size = window.innerWidth;
 var dpr = window.devicePixelRatio;
-canvas.width = size * dpr;
-canvas.height = size * dpr;
+canvas.width = size _ dpr;
+canvas.height = size _ dpr;
 context.scale(dpr, dpr);
 context.lineWidth = 8;
 {{< / highlight >}}
+
 </div>
 
 Now, the approach I'd like to take isn't perfect, but what I'd like to do is start with a big square (the canvas) and then start to divide it up... we will pick a line, either horizontally or vertically and break any squares in that area... after that, we'll add some random to the splitting, so not all squares are split, which should give us something around the famous Mondrian look, albeit probably a little more mathematically rigid.
@@ -60,9 +61,10 @@ function draw() {
 
 draw()
 {{< / highlight >}}
+
 </div>
 
-This is looping through all of our squares (just one at the moment, and drawing it on the canvas). 
+This is looping through all of our squares (just one at the moment, and drawing it on the canvas).
 
 Now, we can create a function to find which squares should be split... and then the function to split the square in the direction we've given.
 
@@ -74,23 +76,24 @@ function splitSquaresWith(coordinates) {
 }
 
 function splitOnX(square, splitAt) {
-  // Create two new squares, based on
-  // splitting the given one at the 
-  // x coordinate given
+// Create two new squares, based on
+// splitting the given one at the
+// x coordinate given
 }
 
 function splitOnY(square, splitAt) {
-  // Create two new squares, based on
-  // splitting the given one at the
-  // y coordinate given
+// Create two new squares, based on
+// splitting the given one at the
+// y coordinate given
 }
 
 splitSquaresWith({x: 160})
 splitSquaresWith({y: 160})
 {{< / highlight >}}
+
 </div>
 
-You can see at the bottom that I'm also calling the split the squares on the x and y, both in the middle. If these work, we'll know we can do a lot more splitting. But for now, these will be great for testing.
+You can see at the bottom that I'm also calling the split the squares on the `x` and `y`, both in the middle. If these work, we'll know we can do a lot more splitting. But for now, these will be great for testing.
 
 First, the `splitSquaresWith` function.
 
@@ -99,22 +102,23 @@ First, the `splitSquaresWith` function.
 const { x, y } = coordinates;
 
 for (var i = squares.length - 1; i >= 0; i--) {
-  const square = squares[i];
-  
-  if (x && x > square.x && x < square.x + square.width) {
-    squares.splice(i, 1);
-    splitOnX(square, x);
-  }
+const square = squares[i];
 
-  if (y && y > square.y && y < square.y + square.height) {
-    squares.splice(i, 1);
-    splitOnY(square, y);
-  }
+if (x && x > square.x && x < square.x + square.width) {
+squares.splice(i, 1);
+splitOnX(square, x);
+}
+
+if (y && y > square.y && y < square.y + square.height) {
+squares.splice(i, 1);
+splitOnY(square, y);
+}
 }
 {{< / highlight >}}
+
 </div>
 
-There's a bit going on here, including some cheeky little tricks"
+There's a bit going on here, including some cheeky little tricks.
 
 - `const { x, y } = coordinates` is extracting the `x` and `y` variables out of the object we're passing, eg `{x: 160}` or `{y: 160}`
 - We're looping backwards through the squares with `(var i = squares.length - 1; i >= 0; i--)` this is because we're taking elements **out** of the loop (and replacing them with 2 squares), looping backwards means the order will stay the same, and the new items won't be split again.
@@ -131,15 +135,16 @@ var squareA = {
 };
 
 var squareB = {
-  x: splitAt,
-  y: square.y,
-  width: square.width - splitAt + square.x,
-  height: square.height
+x: splitAt,
+y: square.y,
+width: square.width - splitAt + square.x,
+height: square.height
 };
 
 squares.push(squareA);
 squares.push(squareB);
 {{< / highlight >}}
+
 </div>
 
 And...
@@ -154,15 +159,16 @@ var squareA = {
 };
 
 var squareB = {
-  x: square.x,
-  y: splitAt,
-  width: square.width,
-  height: square.height - splitAt + square.y
+x: square.x,
+y: splitAt,
+width: square.width,
+height: square.height - splitAt + square.y
 };
 
 squares.push(squareA);
 squares.push(squareB);
 {{< / highlight >}}
+
 </div>
 
 These two functions are creating two squares, where the previous single square was, and then adding them back into our `squares` array. You can see by splitting in the two centers, we've made a window.
@@ -186,7 +192,7 @@ for (var i = 0; i < size; i += step) {
 {{< / highlight >}}
 </div>
 
-Whew, that was a lot of set up... we can get into the `random` now. Rather than splitting each and every square when we hit it, we'll only split then half the time.
+Whew, that was a lot of set up... we can get into the `random` now. Rather than splitting each and every square when we hit it, we'll only split them half the time.
 
 <div class="tmd-trigger" data-from="26" data-to="28" data-indent="3">
 {{< highlight js "linenos=table,linenostart=26" >}}
@@ -210,7 +216,7 @@ if(Math.random() > 0.5) {
 
 And there we have it, the shapes and structure we want! As always, with these tutorials you can hit the small arrow sitting between the editor and the demo and the code will rerun, if you press it a few times now, you'll see our Mondrian structure take a few different shapes.
 
-Lets add some color in. First the variables, using those beautiful red, blue and yellow.
+Let's add some color in. First the variables, using those beautiful red, blue and yellow colors.
 
 <div class="tmd-trigger" data-from="11" data-to="11">
 {{< highlight js "linenos=table,linenostart=11" >}}
@@ -264,7 +270,4 @@ var step = size / 7;
 {{< / highlight >}}
 </div>
 
-And there we have, a Mondrian. Please, hit the link below to have a play on CodePen, play with the colors, how you apply them, play with the split percentages. Its all good fun!
-
-
-
+And there we have it, a Mondrian. Please, hit the link below to have a play on CodePen, play with the colors, how you apply them, play with the split percentages. It's all good fun!
