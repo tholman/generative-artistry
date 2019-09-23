@@ -1,8 +1,8 @@
 +++
 title = "Triangular Mesh"
 date = 2018-06-28T10:24:00-04:00
-number = "04"
 image = "/img/04-triangular-mesh.png"
+iama = "tutorial"
 teaser = "Triangular meshes are the foundations of 3D modeling, but building one doesn't require trigonometry craziness."
 +++
 

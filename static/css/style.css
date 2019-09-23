@@ -7,7 +7,7 @@
 }
 
 body {
-  font-family: 'Roboto Mono', monospace;
+  font-family: "Roboto Mono", monospace;
   -webkit-font-smoothing: antialiased;
   background: #fff;
   padding: 0px;
@@ -27,33 +27,64 @@ code {
   font-weight: bold;
 }
 
+.options {
+  font-size: 14px;
+}
+
+.options ul {
+  padding-left: 30px;
+}
+
+.options a {
+  color: blue;
+  margin-bottom: 4px;
+}
+
+/**
+ * Episodes
+ */
+
+.episode-content {
+  max-width: 600px;
+  padding: 20px;
+}
+
+[data-time] {
+  padding-top: 30px;
+}
+
 /**
  * Header & Footer
  */
 
-header, footer {
+header,
+footer {
   font-weight: bold;
   font-size: 18px;
   padding: 40px;
   width: 100%;
 }
 
-.tutorial header {
+.tutorial header,
+.episode header {
   background: #fafafa;
 }
 
-header .wrapper, footer .wrapper {
+header .wrapper,
+footer .wrapper {
   justify-content: space-between;
   flex-direction: row;
   display: flex;
 }
 
-header a, footer a {
+header a,
+footer a {
   color: #222;
   text-decoration: none;
 }
 
-.tutorial footer {
+.tutorial footer,
+.episode footer {
   background: #fafafa;
 }
 
@@ -87,7 +118,7 @@ article:nth-child(even) {
 
 /*Footer if there is an even number of posts*/
 article:nth-child(odd) + footer {
-    background: #fafafa;
+  background: #fafafa;
 }
 
 .article-number {
@@ -144,6 +175,16 @@ article:nth-child(odd) + footer {
   font-weight: bold;
 }
 
+.sidebar {
+  flex-direction: column;
+  padding-right: 30px;
+  position: sticky;
+  height: 100vh;
+  display: flex;
+  width: 350px;
+  top: 0px;
+}
+
 /**
  * Tutorials
  */
@@ -155,15 +196,7 @@ article:nth-child(odd) + footer {
 
 .tutorial-sidebar {
   justify-content: center;
-  flex-direction: column;
   align-items: flex-end;
-  padding-right: 30px;
-  position: -webkit-sticky;
-  position: sticky;
-  height: 100vh;
-  display: flex;
-  width: 350px;
-  top: 0px;
 }
 
 .tutorial-content {
@@ -214,7 +247,7 @@ article:nth-child(odd) + footer {
   width: 30px;
   height: 30px;
   font-size: 25px;
-  transform: scaleX(-1.0);
+  transform: scaleX(-1);
   margin-right: -35px;
   cursor: pointer;
 }
@@ -245,10 +278,93 @@ form input {
   border: none;
   color: blue;
   font-size: 15px;
-  font-family: inherit; 
+  font-family: inherit;
   padding: 0;
   cursor: pointer;
   text-decoration: underline;
+}
+
+.episode-content {
+  min-height: calc(100vh - 210px);
+  padding-bottom: 0;
+}
+
+/**
+ * Podcast
+ */
+
+audio {
+  width: 100%;
+  margin-top: 35px;
+  min-width: 250px;
+}
+
+.audio-sidebar {
+  height: calc(100vh - 210px);
+  padding-left: 10px;
+  display: block;
+}
+
+details {
+  font-size: 14px;
+}
+
+details .content {
+  padding: 20px;
+  background: #f9f9f9;
+  margin-top: 10px;
+}
+
+.summary {
+  font-size: 14px;
+}
+
+.interactive-option {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #333;
+  font-style: italic;
+  padding: 0 8px;
+}
+
+.rich-content {
+  margin-top: 10px;
+  padding: 30px;
+  background: #f9f9f9;
+  border-radius: 30px;
+  vertical-align: top;
+}
+
+.who:before {
+  content: "";
+  width: 45px;
+  height: 45px;
+  background: red;
+  display: inline-block;
+  border-radius: 50%;
+  margin-right: 10px;
+  margin-left: -40px;
+  margin-top: -40px;
+  position: absolute;
+}
+
+.tim:before {
+  background: green;
+}
+
+.speaker:before {
+  background: orange;
+}
+
+.ruth:before {
+  background: pink;
+}
+
+.rich-content img {
+  width: auto;
+  margin-bottom: 0;
+  max-width: 100%;
+  max-height: 200px;
 }
 
 @media only screen and (max-width: 900px) {

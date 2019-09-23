@@ -1,8 +1,8 @@
 +++
 title = "Hypnotic Squares"
-date = 2018-08-26
-number = "07"
+date = 2018-08-26T09:59:00-04:00
 image = "/img/07-hypnotic-squares.png"
+iama = "tutorial"
 teaser = "William Kolomyjec was another great pioneer of generative art. This piece, \"Hypnotic Squares\", is a great example of recursion in action."
 +++
 
@@ -23,11 +23,12 @@ var context = canvas.getContext('2d');
 
 var size = window.innerWidth;
 var dpr = window.devicePixelRatio;
-canvas.width = size * dpr;
-canvas.height = size * dpr;
+canvas.width = size _ dpr;
+canvas.height = size _ dpr;
 context.scale(dpr, dpr);
 context.lineWidth = 2;
 {{< / highlight >}}
+
 </div>
 
 Now, to create this piece we're going to need to set a few variables, and then we will create our draw function. The goal will be to create a function that uses `recursion` to draw squares inside itself, until they reach a certain minimum size.
@@ -41,11 +42,12 @@ var startSize = size;
 var startSteps = 5;
 
 function draw(x, y, width, height, xMovement, yMovement, steps) {
-  // We will fill this in
+// We will fill this in
 }
 
 draw(0, 0, startSize, startSize, 0, 0, startSteps);
 {{< / highlight >}}
+
 </div>
 
 The `steps` in the draw function, is how many times our square will recurse inwards. It's a fixed variable now, but we will be able to make it a little bit more random later.

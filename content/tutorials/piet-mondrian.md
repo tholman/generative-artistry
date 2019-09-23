@@ -1,9 +1,9 @@
 +++
 title = "Piet Mondrian"
-date = 2018-08-27
-number = "08"
+date = 2018-08-27T09:59:00-04:00
 image = "/img/08-mondrian.png"
-teaser = "Piet Mondrian's art is world renowned. There's also something about his style that makes it irresistible to try to replicate with code."
+iama = "tutorial"
+teaser = "Piet Mondrians art is world renoun, there's also something about his style that makes it irresistable to try to replicate with code."
 +++
 
 # Piet Mondrian
@@ -19,11 +19,12 @@ var context = canvas.getContext('2d');
 
 var size = window.innerWidth;
 var dpr = window.devicePixelRatio;
-canvas.width = size * dpr;
-canvas.height = size * dpr;
+canvas.width = size _ dpr;
+canvas.height = size _ dpr;
 context.scale(dpr, dpr);
 context.lineWidth = 8;
 {{< / highlight >}}
+
 </div>
 
 Now, the approach I'd like to take isn't perfect, but what I'd like to do is start with a big square (the canvas) and then start to divide it up... we will pick a line, either horizontally or vertically and break any squares in that area... after that, we'll add some random to the splitting, so not all squares are split, which should give us something around the famous Mondrian look, albeit probably a little more mathematically rigid.
@@ -60,9 +61,10 @@ function draw() {
 
 draw()
 {{< / highlight >}}
+
 </div>
 
-This is looping through all of our squares (just one at the moment, and drawing it on the canvas). 
+This is looping through all of our squares (just one at the moment, and drawing it on the canvas).
 
 Now, we can create a function to find which squares should be split... and then the function to split the square in the direction we've given.
 
@@ -74,20 +76,21 @@ function splitSquaresWith(coordinates) {
 }
 
 function splitOnX(square, splitAt) {
-  // Create two new squares, based on
-  // splitting the given one at the 
-  // x coordinate given
+// Create two new squares, based on
+// splitting the given one at the
+// x coordinate given
 }
 
 function splitOnY(square, splitAt) {
-  // Create two new squares, based on
-  // splitting the given one at the
-  // y coordinate given
+// Create two new squares, based on
+// splitting the given one at the
+// y coordinate given
 }
 
 splitSquaresWith({x: 160})
 splitSquaresWith({y: 160})
 {{< / highlight >}}
+
 </div>
 
 You can see at the bottom that I'm also calling the split the squares on the `x` and `y`, both in the middle. If these work, we'll know we can do a lot more splitting. But for now, these will be great for testing.
@@ -99,19 +102,20 @@ First, the `splitSquaresWith` function.
 const { x, y } = coordinates;
 
 for (var i = squares.length - 1; i >= 0; i--) {
-  const square = squares[i];
-  
-  if (x && x > square.x && x < square.x + square.width) {
-    squares.splice(i, 1);
-    splitOnX(square, x);
-  }
+const square = squares[i];
 
-  if (y && y > square.y && y < square.y + square.height) {
-    squares.splice(i, 1);
-    splitOnY(square, y);
-  }
+if (x && x > square.x && x < square.x + square.width) {
+squares.splice(i, 1);
+splitOnX(square, x);
+}
+
+if (y && y > square.y && y < square.y + square.height) {
+squares.splice(i, 1);
+splitOnY(square, y);
+}
 }
 {{< / highlight >}}
+
 </div>
 
 There's a bit going on here, including some cheeky little tricks.
@@ -131,15 +135,16 @@ var squareA = {
 };
 
 var squareB = {
-  x: splitAt,
-  y: square.y,
-  width: square.width - splitAt + square.x,
-  height: square.height
+x: splitAt,
+y: square.y,
+width: square.width - splitAt + square.x,
+height: square.height
 };
 
 squares.push(squareA);
 squares.push(squareB);
 {{< / highlight >}}
+
 </div>
 
 And...
@@ -154,15 +159,16 @@ var squareA = {
 };
 
 var squareB = {
-  x: square.x,
-  y: splitAt,
-  width: square.width,
-  height: square.height - splitAt + square.y
+x: square.x,
+y: splitAt,
+width: square.width,
+height: square.height - splitAt + square.y
 };
 
 squares.push(squareA);
 squares.push(squareB);
 {{< / highlight >}}
+
 </div>
 
 These two functions are creating two squares, where the previous single square was, and then adding them back into our `squares` array. You can see by splitting in the two centers, we've made a window.

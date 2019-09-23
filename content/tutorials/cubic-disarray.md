@@ -1,8 +1,8 @@
 +++
 title = "Cubic Disarray"
 date = 2018-05-17T09:59:00-04:00
-number = "03"
 image = "/img/03-cubic-disarray.png"
+iama = "tutorial"
 teaser = "Georg Nees was one of the pioneers of computer art. Cubic disarray is a perfect example of how generative work can be simplistic and powerful at the same time."
 +++
 

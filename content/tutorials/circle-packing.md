@@ -1,8 +1,8 @@
 +++
 title = "Circle Packing"
 date = 2018-07-19T09:59:00-04:00
-number = "06"
 image = "/img/06-circle-packing.png"
+iama = "tutorial"
 teaser = "Packing circles into a tight space gives a beautiful effect, and it's not nearly as complex as it looks!"
 +++
 
