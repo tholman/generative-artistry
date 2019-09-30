@@ -190,14 +190,16 @@ It had a nice stage where you can just be like, here's the shape, here's a color
 
 <span data-time="15:09">
 **Charlie:** I do think like being able to record that process as well. It's really nice like finding those moments because I think so I talk about him a lot. I've never met him. I would like to meet him, but I'm going to totally butcher pronouncing his name, Deslauriers.
-</span>
+
+- [Matts Site](https://www.mattdesl.com)
+  </span>
 
 <span data-time="15:29">
 **Ruth:** We did some work last year JS Conf for you. So, opening for that was generative make the first bit before we, set up the the bit was a generative video, which was some shapes coming up and that was all generative in real time. It was all done in with Web GL and it was him and a guy called Simone. See I'm butchering names. We'll put a link to it in the description of the podcast and yeah, it was really good for us to see some of his process, which isn't any different from what we do. It's just, it's just really just consistently churning out this generative stuff like all the time.
 </span>
 
 <span data-time="16:19">
-**Charlie:** It's just liked this prolific creator in a way that I find so inspiring. And I think also his Twitter is an incredible, so if you haven't checked it out, its Matt Deslauriers on Twitter. Deslauriers, but his stuff is like constantly just it's being released, and you can check it out. And I was looking through the source code of the JS conf last year because he opens sourced it or the people that worked on it open sourced it of which he was one. And like I love it cause there's the comments in that are just, it's like code comments. So, it’s all written just being like this seems to work not sure why, quite exactly because it's been a while since I checked it out. I love that. It just feels like everyone's just trying to make something that feels good and it's hard.
+**Charlie:** It's just liked this prolific creator in a way that I find so inspiring. And I think also his Twitter is an incredible, so if you haven't checked it out, its [Matt desl on Twitter](https://twitter.com/mattdesl). Deslauriers, but his stuff is like constantly just it's being released, and you can check it out. And I was looking through the source code of the JS conf last year because he opens sourced it or the people that worked on it open sourced it of which he was one. And like I love it cause there's the comments in that are just, it's like code comments. So, it’s all written just being like this seems to work not sure why, quite exactly because it's been a while since I checked it out. I love that. It just feels like everyone's just trying to make something that feels good and it's hard.
 </span>
 
 <span data-time="17:05">
