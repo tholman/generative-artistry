@@ -19,8 +19,8 @@ var context = canvas.getContext('2d');
 
 var size = window.innerWidth;
 var dpr = window.devicePixelRatio;
-canvas.width = size _ dpr;
-canvas.height = size _ dpr;
+canvas.width = size * dpr;
+canvas.height = size * dpr;
 context.scale(dpr, dpr);
 context.lineWidth = 8;
 {{< / highlight >}}
