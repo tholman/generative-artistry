@@ -1,7 +1,9 @@
 // Version 0.1, lets get it working first
 
 (function() {
-	var interactiveMode = true;
+	var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+	var interactiveMode;
+
 	var currentTime = 0;
 	var active = false;
 	var currentActiveTime = null;
@@ -22,7 +24,18 @@
 		if (interactiveMode) checkUpdate();
 	});
 
+	prefersReducedMotion.addEventListener('change', () => {
+		setInteractiveMode();
+	});
+
 	const nodeData = [];
+
+	function setInteractiveMode() {
+	// turns off interactive mode if user has preferences for prefers-reduced-motion
+		interactiveMode = !prefersReducedMotion.matches;		
+		interactiveCheckbox.checked = interactiveMode;
+	}
+
 	function getAndPrepTimes() {
 		const nodes = document.querySelectorAll("[data-time]");
 		nodes.forEach(node => {
@@ -52,5 +65,6 @@
 		}
 	}
 
+	setInteractiveMode();
 	getAndPrepTimes();
 })();
