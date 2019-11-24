@@ -41,6 +41,51 @@ code {
 }
 
 /**
+ * Home
+ */
+
+.home-options {
+  height: calc(100vh - 210px);
+  display: flex;
+  flex-direction: row !important;
+  padding: 0;
+}
+
+.main-option {
+  width: 50vw;
+  height: 100%;
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-option:first-child {
+  background: black;
+  color: white;
+}
+
+.main-option:first-child a {
+  color: white;
+}
+
+.main-option a {
+  color: black;
+  text-decoration: none;
+  display: block;
+  max-width: 300px;
+}
+
+.get-started {
+  display: inline-block;
+  margin-top: 5px;
+}
+
+.main-option:nth-child(2) .get-started {
+  color: black;
+}
+
+/**
  * Episodes
  */
 
@@ -167,7 +212,8 @@ article:nth-child(odd) + footer {
   margin-top: 20px;
 }
 
-.article-links a {
+.article-links a,
+.get-started {
   color: white;
   text-decoration: none;
   border: 2px solid;
@@ -305,6 +351,10 @@ audio {
   display: block;
 }
 
+.audio-sidebar iframe {
+  margin-top: 20px;
+}
+
 details {
   font-size: 14px;
 }
@@ -401,5 +451,15 @@ details .content {
   .tutorial-content {
     width: 100%;
     padding-bottom: 50px;
+  }
+
+  .home-options {
+    height: auto;
+    flex-direction: row !important;
+    display: block;
+  }
+
+  .main-option {
+    width: 100vw;
   }
 }

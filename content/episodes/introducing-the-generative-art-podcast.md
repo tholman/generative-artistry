@@ -2,6 +2,7 @@
 title = "Introducing the Generative Art Podcast"
 date = 2019-09-15T09:59:00-04:00
 image = "/img/episode.png"
+episode = "https://anchor.fm/generative-art/embed/episodes/Introducing-the-Generative-Art-Podcast-e5d31s"
 iama = "episode"
 teaser = "Ruth and Tim get to talking about what they want to get out of this podcast, where we want to take it, and preaching the good word of creative code, and generative art."
 author = "Ruth John & Tim Holman"
@@ -10,8 +11,6 @@ number = "00"
 +++
 
 # Introducing our Generative Art Podcast!
-
-_**If you hit play on the left, with the transcription, and media checkbox ticked, this text will flow with the podcast. So you can drop back into the browser any time, and get any links or relavent text!**_
 
 **In this episode Ruth and Tim get to talking about what they want to get out of this podcast, where we want to take it, and preaching the good word of creative code, and generative art.**
 

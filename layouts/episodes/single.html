@@ -22,13 +22,20 @@
 
     <div class="tutorial-post">
       <div class="sidebar audio-sidebar">
-        <audio src="{{ .Params.mp3 }}" controls></audio>
+        <iframe
+          src="{{ .Params.episode }}"
+          height="102px"
+          frameborder="0"
+          scrolling="no"
+        ></iframe>
+
+        <!-- <audio src="{{ .Params.mp3 }}" controls></audio> -->
 
         <div class="interactive-option">
-          <input type="checkbox" id="interactive" name="interactive" checked />
+          <!--     <input type="checkbox" id="interactive" name="interactive" checked />
           <label for="interactive"
             >Play with transcription and media attached to podcast.</label
-          >
+          > -->
         </div>
 
         <div class="options">
@@ -68,10 +75,6 @@
       </div>
     </div>
 
-    {{ partial "footer.html" . }}
-
-    <script src="/js/transcription-markdown.js"></script>
-
-    {{ partial "tracking.html" . }}
+    {{ partial "footer.html" . }} {{ partial "tracking.html" . }}
   </body>
 </html>

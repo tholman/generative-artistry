@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ $.Site.Title }}</title>
+
+    <meta charset="utf-8" />
+
+    <meta name="description" content="{{ $.Site.Params.Description }}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto+Mono"
+      rel="stylesheet"
+    />
+    <link href="/css/style.css" rel="stylesheet" />
+  </head>
+  <body class="main">
+    {{ partial "header.html" . }}
+
+    <article class="home-options">
+      <div class="main-option">
+        <a href="/tutorials">
+          <h2>Tutorials</h2>
+          <p>
+            A range of interactive tutorials, exploring ideas and techniques
+            used in generative art. Progressively learn the steps used to create
+            generative art.
+          </p>
+          <p class="get-started">
+            Get Started
+          </p>
+        </a>
+      </div>
+      <div class="main-option">
+        <a href="/episodes">
+          <h2>Podcast</h2>
+          <p>
+            Join Tim and Ruth as we delve into different aspects of generative
+            art and the amazing community around it. Available everywhere you
+            listen.
+          </p>
+          <p class="get-started">
+            Listen now
+          </p>
+        </a>
+      </div>
+    </article>
+
+    {{ partial "footer.html" . }} {{ partial "tracking.html" . }}
+    <script src="/js/favicon.js"></script>
+  </body>
+</html>

@@ -3,6 +3,7 @@ title = "Charlie Gleason"
 date = 2019-09-29T09:59:00-04:00
 image = "/img/episode.png"
 iama = "episode"
+episode = "https://anchor.fm/generative-art/embed/episodes/Charlie-Gleason-e5lnrb"
 teaser = "The talented Charlie Gleason joins us and chats about his journey into creative coding and the things he has built."
 author = "Ruth John & Tim Holman"
 mp3 = "/mp3/2-charlie-gleason.mp3"
@@ -10,9 +11,7 @@ mp3 = "/mp3/2-charlie-gleason.mp3"
 
 # Amazing guest, Charlie Gleason!
 
-_**If you hit play on the left, with the transcription, and media checkbox ticked, this text will flow with the podcast. So you can drop back into the browser any time, and get any links or relavent text!**_
-
-Our first guest! The talented Charlie Gleason joins us and chats about his journey into creative coding and the things he has built. All the way through Actionscript, sound engineering, design and of course there's some generative art in there!
+**Our first guest! The talented Charlie Gleason joins us and chats about his journey into creative coding and the things he has built. All the way through Actionscript, sound engineering, design and of course there's some generative art in there!**
 
 Be sure to check out [Charlie's Website](https://www.charliegleason.com), and follow him [on Twitter](https://twitter.com/superhighfives)
 

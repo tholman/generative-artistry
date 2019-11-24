@@ -3,6 +3,7 @@ title = "Generative Art and Creative Code"
 date = 2019-09-19T09:59:00-04:00
 image = "/img/episode.png"
 iama = "episode"
+episode = "https://anchor.fm/generative-art/embed/episodes/Generative-Art--Digital-art-and-the-world-of-Creative-Coding-e5e2gp"
 teaser = "Lets start talking about generative art, creative code, and the world around it"
 author = "Ruth John & Tim Holman"
 mp3 = "/mp3/1-generative-and-creative-art.mp3"
@@ -11,9 +12,7 @@ number = "00"
 
 # Generative art, creative code, and the world around us!
 
-_**If you hit play on the left, with the transcription, and media checkbox ticked, this text will flow with the podcast. So you can drop back into the browser any time, and get any links or relavent text!**_
-
-Tim and Ruth jump right into creative code and generative art, this episode we talk about the what, when and why's.
+**Tim and Ruth jump right into creative code and generative art, this episode we talk about the what, when and why's.**
 
 --
 
