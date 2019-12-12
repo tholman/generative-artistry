@@ -346,9 +346,13 @@ audio {
 }
 
 .audio-sidebar {
-  height: calc(100vh - 210px);
-  padding-left: 10px;
-  display: block;
+  flex-direction: column;
+  padding-right: 30px;
+  position: sticky;
+  display: flex;
+  width: 350px;
+  padding: 20px;
+  top: 0px;
 }
 
 .audio-sidebar iframe {
@@ -462,4 +466,22 @@ details .content {
   .main-option {
     width: 100vw;
   }
+}
+
+@media only screen and (max-width: 600px) {
+
+  .audio-post {
+    flex-direction: column;
+  }
+
+  .audio-sidebar {
+    width: 100%;
+    position: relative;
+  }
+
+  .episode-content,
+  .audio-sidebar {
+    padding-top: 0;
+  }
+
 }
