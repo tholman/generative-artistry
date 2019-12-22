@@ -6,7 +6,6 @@ iama = "episode"
 episode = "https://anchor.fm/generative-art/embed/episodes/Chat-random1-Randomness-e7odsb"
 teaser = "Ruth and Tim decide that there's a whole lot to be said about random numbers. LOTS!"
 author = "Ruth John & Tim Holman"
-mp3 = "/mp3/2-charlie-gleason.mp3"
 +++
 
 # Lets talk about random

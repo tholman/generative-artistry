@@ -6,7 +6,6 @@ iama = "episode"
 episode = "https://anchor.fm/generative-art/embed/episodes/Charlie-Gleason-e5lnrb"
 teaser = "The talented Charlie Gleason joins us and chats about his journey into creative coding and the things he has built."
 author = "Ruth John & Tim Holman"
-mp3 = "/mp3/2-charlie-gleason.mp3"
 +++
 
 # Amazing guest, Charlie Gleason!

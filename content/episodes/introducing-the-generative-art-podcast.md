@@ -6,7 +6,6 @@ episode = "https://anchor.fm/generative-art/embed/episodes/Introducing-the-Gener
 iama = "episode"
 teaser = "Ruth and Tim get to talking about what they want to get out of this podcast, where we want to take it, and preaching the good word of creative code, and generative art."
 author = "Ruth John & Tim Holman"
-mp3 = "/mp3/0-intro.mp3"
 number = "00"
 +++
 

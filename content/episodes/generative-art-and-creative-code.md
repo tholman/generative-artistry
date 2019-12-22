@@ -6,8 +6,6 @@ iama = "episode"
 episode = "https://anchor.fm/generative-art/embed/episodes/Generative-Art--Digital-art-and-the-world-of-Creative-Coding-e5e2gp"
 teaser = "Lets start talking about generative art, creative code, and the world around it"
 author = "Ruth John & Tim Holman"
-mp3 = "/mp3/1-generative-and-creative-art.mp3"
-number = "00"
 +++
 
 # Generative art, creative code, and the world around us!

@@ -6,7 +6,6 @@ iama = "episode"
 episode = "https://anchor.fm/generative-art/embed/episodes/Tooling-e922dm"
 teaser = "Tools are something that are almost entirely unique to humans. Hear about how they live within the world of art and code."
 author = "Ruth John & Tim Holman"
-mp3 = "/mp3/2-charlie-gleason.mp3"
 +++
 
 # Lets talk about random
