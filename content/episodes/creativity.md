@@ -3,7 +3,7 @@ title = "Math.random(2) - Creativity"
 date = 2020-02-05T09:59:00-04:00
 image = "/img/episode.png"
 iama = "episode"
-episode = "https://anchor.fm/generative-art/episodes/Chat-random2-Creativity-ealpbm"
+episode = "https://anchor.fm/generative-art/embed/episodes/Chat-random2-Creativity-ealpbm"
 teaser = "Tim and Ruth chat creativity - what it means, the creative brain, why are we creative, the need for it."
 author = "Ruth John & Tim Holman"
 +++
