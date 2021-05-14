@@ -43,12 +43,12 @@ We also need variables to define the dimensions of the grid, which has a landsca
 
 <div class="tmd-trigger" data-from="14">
 {{< highlight js "linenos=table,linenostart=14" >}}
-var gridw = canvas.width  * 0.9;
-var gridh = canvas.height * 0.7;
+var gridw = size * 0.9;
+var gridh = size * 0.7;
 var cellw = gridw / cols;
 var cellh = gridh / rows;
-var margx = (canvas.width  - gridw) * 0.5;
-var margy = (canvas.height - gridh) * 0.5;
+var margx = (size - gridw) * 0.5;
+var margy = (size - gridh) * 0.5;
 {{< / highlight >}}
 </div>
 
